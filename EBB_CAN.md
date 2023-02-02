@@ -76,7 +76,7 @@ I have 24v and ground going INTO the U2C to supply voltage to all the other conn
 
 NOTE: Once you connect your U2C to USB, you should see two little lights turn on. If you do not see this, you may have a bad USB cable.
 
-![image](img/EBBCANSetup.png)
+![image](img/ebb/EBBCANSetup.png)
 
 Now there is nothing wrong with wiring up your 24v right to the EBB board (more on that in a minute), but for me, I found this to be the simplest way to set things up.
 
@@ -176,11 +176,11 @@ aliases_i2c:
 
 Here is a pin diagram for the EBB36 1.x:
 
-![image](img/ebb36_v1.x_pinout.png)
+![image](img/ebb/ebb36_v1.x_pinout.png)
 
 So that means we need to plug the fan into this port:
 
-![image](img/PA0.png)
+![image](img/ebb/PA0.png)
 
 In order for the config to match the physical connection on the board.
 
