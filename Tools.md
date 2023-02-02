@@ -1,25 +1,3 @@
-# Parts URLs
-- Molex Kit
-    - https://www.digikey.com/en/products/detail/molex/0766500159/2116044?s=N4IgTCBcDaIAwHYBsSCsc4EZUE4QF0BfIA
-- https://www.printedsolid.com/products/bofa-3d-print-pro-3-fume-extraction
-- https://kb-3d.com/store/inserts-fasteners-adhesives/288-5x10x1mm-shim-ring-washer-pack-of-50-din988-1634423113147.html
-- Extrusion nuts
-    - https://www.dold-mechatronik.de/Standard-connector-20-I-type-groove-5-incl-Mounting-kit
-- Build plates
-    - https://www.filamentone.com/products/ultistik-premium-powder-coated-ultem-pei-build-plate-355-x-355-voron-sovol-sv03
-- Brushes
-    - https://www.aliexpress.us/item/2251832866802617.html?spm=2114.12010615.8148356.2.315e106dfzI86U&gatewayAdapt=glo2usa4itemAdapt&_randl_shipto=US
-    - https://www.amazon.com/uxcell%C2%AE-Length-Plastic-Handle-Bristle/dp/B00X9HY5D4
-- Tubing
-    - https://west3d.com/products/capricornus-ptfe-tube-1-9mm-teflonto
-    - https://west3d.com/products/bowden-ptfe-tube-4mm-od-2-5mm-id
-- Igus cables direct
-    - https://www.igus.com/product?artNr=CF10-05-04
-- HiWin rails
-    - https://magicphoenix.xyz/product/hiwin-mgn12h-rail-z1pm/
-    - https://magicphoenix.xyz/product/magicphoenix-mgn9h-rail440c-sus/?cgkit_search_word=mgn9
-- Other rails
-    - https://west3d.com/products/west3d-printing-mgn12h-1r-300-350-400-linear-rails-with-carriages?variant=42096413376724
-    - fabreeko HBs
-- Good fans
-    - https://www.digikey.com/en/products/detail/orion-fans/OD4010-24HB01A/2621114
+# Tools URLs
+
+Good tools make a difference! Here are some of the ones I have
