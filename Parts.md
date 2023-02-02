@@ -15,11 +15,13 @@
     - https://west3d.com/products/bowden-ptfe-tube-4mm-od-2-5mm-id
 - Igus cables direct
     - https://www.igus.com/product?artNr=CF10-05-04
-- HiWin rails
-    - https://magicphoenix.xyz/product/hiwin-mgn12h-rail-z1pm/
-    - https://magicphoenix.xyz/product/magicphoenix-mgn9h-rail440c-sus/?cgkit_search_word=mgn9
-- Other rails
-    - https://west3d.com/products/west3d-printing-mgn12h-1r-300-350-400-linear-rails-with-carriages?variant=42096413376724
-    - fabreeko HBs
 - Good fans
     - https://www.digikey.com/en/products/detail/orion-fans/OD4010-24HB01A/2621114
+- Rails
+    - Fabreeko HoneyBadger
+    - http://www.chieftek.com/product-mr.asp
+    - https://west3d.com/products/west3d-printing-mgn12h-1r-300-350-400-linear-rails-with-carriages?variant=42096413376724
+    - https://magicphoenix.xyz/product/hiwin-mgn12h-rail-z1pm/
+    - https://magicphoenix.xyz/product/magicphoenix-mgn9h-rail440c-sus/?cgkit_search_word=mgn9
+- Motors
+    - https://www.omc-stepperonline.com/voron-v0-1-bom-of-stepper-motors-14hs20-1504s-14hr07-1004vrn-17ls13-0404e-200g-voronv01
