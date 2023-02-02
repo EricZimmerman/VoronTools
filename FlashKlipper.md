@@ -52,7 +52,6 @@ On restart, klipper should show most current version in Mailsail
     ```
     sudo service klipper stop
     python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u MYUUID
-    
     ```
     
 3. Review the output to make sure everything worked OK! (Your UUID will of course be different)
