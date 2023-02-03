@@ -7,6 +7,7 @@
     - https://www.dold-mechatronik.de/Standard-connector-20-I-type-groove-5-incl-Mounting-kit
 - Build plates
     - https://www.filamentone.com/products/ultistik-premium-powder-coated-ultem-pei-build-plate-355-x-355-voron-sovol-sv03
+    - https://www.fabreeko.com/products/fabreeko-v0-1-single-sided-balck-pei-textured?_pos=5&_psq=textured+&_ss=e&_v=1.0&variant=43009605828863
 - Brushes
     - https://www.aliexpress.us/item/2251832866802617.html?spm=2114.12010615.8148356.2.315e106dfzI86U&gatewayAdapt=glo2usa4itemAdapt&_randl_shipto=US
     - https://www.amazon.com/uxcell%C2%AE-Length-Plastic-Handle-Bristle/dp/B00X9HY5D4
