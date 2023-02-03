@@ -17,6 +17,7 @@
     - https://www.igus.com/product?artNr=CF10-05-04
 - Good fans
     - https://www.digikey.com/en/products/detail/orion-fans/OD4010-24HB01A/2621114
+    - https://www.digikey.com/en/products/detail/nmb-technologies-corporation/04010SS-24N-AT-00/6204931
 - Rails
     - Fabreeko HoneyBadger
     - http://www.chieftek.com/product-mr.asp
