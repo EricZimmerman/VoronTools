@@ -20,6 +20,10 @@
     - https://www.digikey.com/en/products/detail/orion-fans/OD4010-24HB01A/2621114
     - https://www.digikey.com/en/products/detail/nmb-technologies-corporation/04010SS-24N-AT-00/6204931
     - https://www.mouser.com/ProductDetail/NMB-Technologies/04010SS-24N-AT-00?qs=r5DSvlrkXmI3kB%252BSzbHo2g%3D%3D
+- Nozzles
+    - https://west3d.com/products/west3ds-undertaker-tungsten-carbide-nozzle?variant=42290761334996
+    - Nozzle X
+    - Bozzle 
 - Rails
     - Fabreeko HoneyBadger
     - http://www.chieftek.com/product-mr.asp
