@@ -22,8 +22,9 @@
     - https://www.mouser.com/ProductDetail/NMB-Technologies/04010SS-24N-AT-00?qs=r5DSvlrkXmI3kB%252BSzbHo2g%3D%3D
 - Nozzles
     - https://west3d.com/products/west3ds-undertaker-tungsten-carbide-nozzle?variant=42290761334996
-    - Nozzle X
+    - https://www.championx.com/products-and-solutions/drilling-technologies/diamondback-nozzles/
     - Bozzle 
+    - Nozzle X?
 - Rails
     - Fabreeko HoneyBadger
     - http://www.chieftek.com/product-mr.asp
