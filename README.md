@@ -26,6 +26,7 @@ This is a landing page for my other Voron related stuff
 
 ### Input shaper
 - Understanding shaper graphs: https://www.youtube.com/watch?v=M-yc_XM8sP4
+- https://gist.github.com/kmobs/3a09cc28ec79e62f28d8db2179be7909
 
 ### Frequency tester
 - https://gist.github.com/EricZimmerman/d6bf8a4b0a200611f3d9aa308a31e3c1
