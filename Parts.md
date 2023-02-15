@@ -13,7 +13,6 @@
     - https://www.amazon.com/uxcell%C2%AE-Length-Plastic-Handle-Bristle/dp/B00X9HY5D4
 - Bling
     - https://chaoticlab.xyz/products/voron-tensioner-free
-    - 
 - Tubing
     - https://west3d.com/products/capricornus-ptfe-tube-1-9mm-teflonto
     - https://west3d.com/products/bowden-ptfe-tube-4mm-od-2-5mm-id
