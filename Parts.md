@@ -11,6 +11,9 @@
 - Brushes
     - https://www.aliexpress.us/item/2251832866802617.html?spm=2114.12010615.8148356.2.315e106dfzI86U&gatewayAdapt=glo2usa4itemAdapt&_randl_shipto=US
     - https://www.amazon.com/uxcell%C2%AE-Length-Plastic-Handle-Bristle/dp/B00X9HY5D4
+- Bling
+    - https://chaoticlab.xyz/products/voron-tensioner-free
+    - 
 - Tubing
     - https://west3d.com/products/capricornus-ptfe-tube-1-9mm-teflonto
     - https://west3d.com/products/bowden-ptfe-tube-4mm-od-2-5mm-id
