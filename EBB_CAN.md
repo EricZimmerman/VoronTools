@@ -78,6 +78,8 @@ NOTE: Once you connect your U2C to USB, you should see two little lights turn on
 
 ![image](img/ebb/EBBCANSetup.png)
 
+Note that the Octopus should not be connected to the USB C port, this is just illustrating overall connectivity.
+
 Now there is nothing wrong with wiring up your 24v right to the EBB board (more on that in a minute), but for me, I found this to be the simplest way to set things up.
 
 I am using 22awg Igus cable for my CAN cable. You will need to get motion rated wire, or something with a high strand count (19 or more) so you do not have issues with things breaking later.
