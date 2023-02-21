@@ -124,6 +124,11 @@ canbus_uuid: 2c77b9d71a11
 ```
 5. Replace `2c77b9d71a11` with **YOUR UUID**
 
+6. Save the file, exit nano, and then add this to your printer.cfg:
+```
+[include toolhead_btt_ebbcan_G0B1_v1.2.cfg]
+```
+
 # Now what?
 
 At this point everything should be up and running, but how can you test it? The easiest way is to change the `[fan]` to a `[fan_generic]` so you can see a new fan slider in Mainsail. To do that, find the following section in the ebb cfg you downloaded above:
