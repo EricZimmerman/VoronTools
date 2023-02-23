@@ -1,5 +1,3 @@
-TODO: Unpack homing_override block
-
 This writeup covers how to set up sensorless homing on an Octopus 1.1 with 2209 drivers. Different drivers and/or MCUs may differ. Adjust accordingly.
 
 Some of this information has been sourced from Clee's guide, found [here](https://docs.vorondesign.com/community/howto/clee/sensorless_xy_homing.html), and updated as necessary from my experience.
@@ -13,7 +11,7 @@ Some of this information has been sourced from Clee's guide, found [here](https:
 4. Start up the printer and wait for it to boot
 5. MAKE A BACKUP OF YOUR CONFIG (or better yet go do [this](https://docs.vorondesign.com/community/howto/EricZimmerman/BackupConfigToGithub.html))
 6. Create a new file in the location of your choosing named `homing.cfg`
-7. Open another browser tab and open [this](https://github.com/EricZimmerman/Voron24/blob/master/macros/helpers/homing.cfg) page
+7. Open another browser tab and open [this](https://github.com/EricZimmerman/Voron24/blob/master/macros/helpers/homing.cfg) page if you have a 2.4, or [this](https://github.com/EricZimmerman/Voron02/blob/master/macros/helpers/homing.cfg) page if you have a v0.
 8. Edit `homing.cfg` 
 9. **Add** the macro from step 7 to `homing.cfg`. Be sure to edit the coordinates as needed for your bed in the Z section (the line that reads **G1 X175 Y175 F15000**). IE to the center of the bed, your endstop pin for z, etc.
 10. Save `homing.cfg` 
