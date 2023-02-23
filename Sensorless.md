@@ -1,3 +1,5 @@
+TODO: Unpack homing_override block
+
 This writeup covers how to set up sensorless homing on an Octopus 1.1 with 2209 drivers. Different drivers and/or MCUs may differ. Adjust accordingly.
 
 Some of this information has been sourced from Clee's guide, found [here](https://docs.vorondesign.com/community/howto/clee/sensorless_xy_homing.html), and updated as necessary from my experience.
