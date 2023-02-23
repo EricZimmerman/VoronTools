@@ -12,6 +12,7 @@ This is a landing page for my other Voron related stuff
 
 - [Updating Klipper from the Pi](FlashKlipper.md)
 - [CANBus and EBB36/U2C setup](EBB_CAN.md)
+- [Sensorless homing on an Octopus MCU](Sensorless.md)
 
 - [Backup your printer configurations to Github](https://docs.vorondesign.com/community/howto/EricZimmerman/BackupConfigToGithub.html)
 - [PRINT_START and you: Using Slicers and PRINT_START macros](https://docs.vorondesign.com/community/howto/EricZimmerman/SlicerAndPrintStart.html)
