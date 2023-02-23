@@ -18,6 +18,8 @@ Some of this information has been sourced from Clee's guide, found [here](https:
 11. Edit your `printer.cfg` file
 12. If you have a `[safe_z_home]` section, find it and comment it out as we will be using homing override as found in `homing.cfg`.
 
+The `[homing_override]` block we have in the above macros is now going to be responsible for all homing, whether via the buttons in Mainsail or Fluidd, or via commands like G28 X, etc. This override allows us, the end user, to customize how the homing operation happens. When using sensorless, this is important, as it lets us adjust things like the current used for homing, etc. More on this later.
+
 ## Updating stepper_x
 
 1. Locate the `[stepper_x]` section
