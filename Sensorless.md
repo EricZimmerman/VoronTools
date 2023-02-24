@@ -28,7 +28,7 @@ The `[homing_override]` block we have in the above macros is now going to be res
 4. **Change** `homing_speed` to `40`
 5. **Change** `homing_retract_dist` to `0`
 6. Locate the `[tmc2209 stepper_x]` section (usually right below where you just edited)
-7. **Change** the `diag_pin` to match what you recorded from step 2, but add a ^ before it.
+7. **Add** `diag_pin` to match what you recorded from step 2, but add a ^ before it.
     Example: `diag_pin: ^PG6`
 8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
 
@@ -40,7 +40,7 @@ The `[homing_override]` block we have in the above macros is now going to be res
 4. **Change** `homing_speed` to `40`
 5. **Change** `homing_retract_dist` to `0`
 6. Locate the `[tmc2209 stepper_y]` section (usually right below where you just edited)
-7. **Change** the `diag_pin` to match what you recorded from step 2, but add a ^ before it.
+7. **Add** `diag_pin` to match what you recorded from step 2, but add a ^ before it.
     Example: `diag_pin: ^PG9`
 8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
 
@@ -73,7 +73,9 @@ Before you begin, GENTLY and SLOWLY move the print head to approximately 4 inche
 
 Remember that **force_move** thing you added and the macros in `homing.cfg` from earlier? Those are going to now control homing for you. When you `G28 X`, it will use the `_HOME_X` macro to do so.
 
-Let's take a closer look at what the macro responsible for homing X is doing (Y will work the same way, just with different moves, etc.):
+Let's take a closer look at what the macro responsible for homing X is doing (Y will work the same way, just with different moves, etc.).
+
+**NOTE**: The macro is shown below in code blocks. These are _not_ meant to be copy pasted anywhere (we did all the macros above into `homing.cfg`) but they are shown here so we can understand what the macros are doing.
 
 ```
     {% set RUN_CURRENT_X = printer.configfile.settings['tmc2209 stepper_x'].run_current|float %}
