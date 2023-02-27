@@ -23,14 +23,14 @@ Summarized from [here](https://github.com/maz0r/klipper_canbus/blob/main/control
 
 1. Use nano to create a new file with the command `sudo nano /etc/network/interfaces.d/can0`
 2. Add the following code
-  ```
-  allow-hotplug can0
-  iface can0 can static
-   bitrate 1000000
-   up ifconfig $IFACE txqueuelen 256
-   pre-up ip link set can0 type can bitrate 1000000
-   pre-up ip link set can0 txqueuelen 256
-   ```
+    ```bash
+    allow-hotplug can0
+    iface can0 can static
+     bitrate 1000000
+     up ifconfig $IFACE txqueuelen 256
+     pre-up ip link set can0 type can bitrate 1000000
+     pre-up ip link set can0 txqueuelen 256
+     ```
 
 3. Save the file with `CTRL-x` and reboot the pi with `sudo reboot`
 
@@ -59,14 +59,62 @@ have to touch the U2C again
     - Follow the steps to compile and flash klipper over CAN (more on this later)
     - Success
 3. When this is done, ADD THE JUMPER for the 120 ohm resistor to the U2C and set the U2C aside
+    
+    ![image](img/ebb/U2C120.png)
 
 # EBB
 
-Go to [here](https://github.com/maz0r/klipper_canbus/blob/main/toolhead/ebb36-42_v1.1.md) and do what it says, with the following changes:
+## Building CanBoot
 
-1. Use a CAN bus speed of `1000000` everywhere the guide shows 500000
-2. When you get to step 7, STOP after disconnecting the board from USB
-3. When this is done, ADD THE JUMPER for the 120 ohm resistor to the EBB and set the EBB aside
+1. Clone the CanBoot repository to your pi
+    ```bash
+    cd ~
+    git clone https://github.com/Arksine/CanBoot
+    ```
+
+2. Run the following commands to bring up the menu to configure the firmware
+    ```bash
+    cd CanBoot
+    make menuconfig
+    ```
+    
+3. Starting from the top, make your firmware selections look exactly like the image below
+    ![image](img/ebb/CanBootConfig.png)
+    
+4. Exit using `ESC` or `Q`, then confirm with yes (`Y`)
+5. Build the firmware using the following commands:
+    ```
+    make clean
+    make
+    ```
+    ![image](img/ebb/CanBootFirmware.png)
+
+## Flashing CanBoot to the Ebb
+
+1. Add a jumper as shown in the image below so the board can be powered via a USB connection
+    ![image](img/ebb/EBBButtons.png)
+
+2. Connect your device to your PI via USB
+3. Press and hold the `RESET` and `BOOT` buttons down (button locations shown in step 1)
+    1. Release `RESET` button
+    2. Release `BOOT` button
+4. The device should now be in DFU mode. Verify this via the `lsusb` command, which should look something like this:
+    ```
+    Bus 001 Device 005: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
+    ```
+5. Record the device Id (the part after `ID` above, but yours may be different)
+6. Run the following command to erase and flash the EBB with CanBoot (again, VERIFY your device Id):
+    ```
+    sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
+    ```
+7. The board will now be flashed. It will look similar to what is shown below. NOTE: If you see any mention of an error after the `File downloaded successfully` message, it can be ignored.
+
+    ![image](img/ebb/CanFlashOk.png)
+    
+8. Unplug the board from USB and remove the USB jumper you installed for step 1
+9. ADD THE JUMPER for the 120 ohm resistor to the EBB
+
+    ![image](img/ebb/EBB120.png)
 
 # Connecting all the things
 
@@ -76,9 +124,11 @@ I have 24v and ground going INTO the U2C to supply voltage to all the other conn
 
 NOTE: Once you connect your U2C to USB, you should see two little lights turn on. If you do not see this, you may have a bad USB cable.
 
+Note that the Octopus _should not be connected to the USB C port_, this is just illustrating overall connectivity.
+
 ![image](img/ebb/EBBCANSetup.png)
 
-Note that the Octopus should not be connected to the USB C port, this is just illustrating overall connectivity.
+
 
 Now there is nothing wrong with wiring up your 24v right to the EBB board (more on that in a minute), but for me, I found this to be the simplest way to set things up.
 
@@ -92,7 +142,7 @@ TRIPLE CHECK your plarity and wiring here. The BTT stuff is not the same on both
 
 Once you have the cable wired up (I used the molex connection), plug it into the toolhead and the U2C (or however you decided to power things up.
 
-# Verifying you see CanBoot and flashing Klipper to the Ebb
+# Verifying you see CanBoot and flashing Klipper to the EBB
 
 (Some steps taken from [here](https://github.com/maz0r/klipper_canbus/blob/main/toolhead/ebb36-42_v1.1.md), which you should review as well)
 
@@ -106,28 +156,27 @@ At this point, after checking twice that everything is connected correctly, powe
 # Wiring up a config file
 
 1. On the pi, run the following commands:
-
-```
-cd ~/printer_data/config
-wget https://raw.githubusercontent.com/maz0r/klipper_canbus/main/toolhead/example_configs/toolhead_btt_ebbcan_G0B1_v1.2.cfg
-```
+    ```bash
+    cd ~/printer_data/config
+    wget https://raw.githubusercontent.com/maz0r/klipper_canbus/main/toolhead/example_configs/toolhead_btt_ebbcan_G0B1_v1.2.cfg
+    ```
 
 2. Edit the file using nano
-```
-nano toolhead_btt_ebbcan_G0B1_v1.2.cfg
-```
+    ```bash
+    nano toolhead_btt_ebbcan_G0B1_v1.2.cfg
+    ```
 
 3. Remember the UUID you recorded earlier? Find it and scroll down to the section that looks like this:
-```
-[mcu can0]
-canbus_uuid: 2c77b9d71a11
-```
+    ```bash
+    [mcu can0]
+    canbus_uuid: 2c77b9d71a11
+    ```
 5. Replace `2c77b9d71a11` with **YOUR UUID**
 
 6. Save the file, exit nano, and then add this to your printer.cfg:
-```
-[include toolhead_btt_ebbcan_G0B1_v1.2.cfg]
-```
+    ```bash
+    [include toolhead_btt_ebbcan_G0B1_v1.2.cfg]
+    ```
 
 # Now what?
 
