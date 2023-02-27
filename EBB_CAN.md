@@ -42,9 +42,9 @@ Note that the U2C does not need much done to it, short of making sure it has the
 issue with not being able to use CANBoot to flash things behind the U2C on older firmware. Once you do the steps below, you do not
 have to touch the U2C again
 
-1. make sure you have the latest firmware for the U2C from BTT, which is available [here](https://github.com/Arksine/CanBoot/issues/44#issuecomment-1381555466): 
+1. Make sure you have the latest firmware for the U2C from BTT, which is available [here](https://github.com/Arksine/CanBoot/issues/44#issuecomment-1381555466): 
 2. The steps to flash this firmware are (taken from above link):
-    - Download the file from bigtreetech comment.
+    - Download the file from bigtreetech comment
     - Stop klipper `sudo systemctl stop klipper`
     - Bring down the can interface `sudo ifdown can0`
     - Unzip the firmware file from bigtreetech
@@ -94,7 +94,7 @@ have to touch the U2C again
 1. Add a jumper as shown in the image below so the board can be powered via a USB connection
     ![image](img/ebb/EBBButtons.png)
 
-2. Connect your device to your PI via USB
+2. Connect your device to your Pi via USB
 3. Press and hold the `RESET` and `BOOT` buttons down (button locations shown in step 1)
     1. Release `RESET` button
     2. Release `BOOT` button
@@ -102,8 +102,8 @@ have to touch the U2C again
     ```
     Bus 001 Device 005: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
     ```
-5. Record the device Id (the part after `ID` above, but yours may be different)
-6. Run the following command to erase and flash the EBB with CanBoot (again, VERIFY your device Id):
+5. Record the device ID (the part after `ID` above, but yours may be different)
+6. Run the following command to erase and flash the EBB with CanBoot (again, VERIFY your device ID. The ID is at the end of the command below):
     ```
     sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
     ```
@@ -146,7 +146,7 @@ Once you have the cable wired up (I used the molex connection), plug it into the
 
 (Some steps taken from [here](https://github.com/maz0r/klipper_canbus/blob/main/toolhead/ebb36-42_v1.1.md), which you should review as well)
 
-At this point, after checking twice that everything is connected correctly, power up the printer and SSH into the pi.
+At this point, after checking twice that everything is connected correctly, power up the printer and SSH into the Pi.
 
 1. Open [this](https://github.com/maz0r/klipper_canbus/blob/main/toolhead/ebb36-42_v1.1.md) webpage
 2. Scroll down to step 9
