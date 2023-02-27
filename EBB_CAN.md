@@ -89,7 +89,7 @@ have to touch the U2C again
     ```
     ![image](img/ebb/CanBootFirmware.png)
 
-## Flashing CanBoot to the Ebb
+## Flashing CanBoot to the EBB
 
 1. Add a jumper as shown in the image below so the board can be powered via a USB connection
     ![image](img/ebb/EBBButtons.png)
