@@ -2,6 +2,8 @@ This writeup covers how to set up sensorless homing on an Octopus 1.1 with 2209 
 
 Some of this information has been sourced from Clee's guide, found [here](https://docs.vorondesign.com/community/howto/clee/sensorless_xy_homing.html), and updated as necessary from my experience.
 
+**NOTE NOTE NOTE: IF YOU DO NOT READ THIS CAREFULLY AND ADJUST THINGS WHEN NEEDED YOU WILL BE SAD. MY 2.4 IS CONFIGURED FOR TAP. IF YOU USE AN ENDSTOP YOU MUST CHANGE THINGS TO HOME Z TO THE ENDSTOP PIN, NOT THE MIDDLE OF THE BED. YOU HAVE BEEN WARNED!**
+
 # Getting started
 
 1. Power off the printer gracefully
@@ -19,6 +21,8 @@ Some of this information has been sourced from Clee's guide, found [here](https:
 12. If you have a `[safe_z_home]` section, find it and comment it out as we will be using homing override as found in `homing.cfg`.
 
 The `[homing_override]` block we have in the above macros is now going to be responsible for all homing, whether via the buttons in Mainsail or Fluidd, or via commands like G28 X, etc. This override allows us, the end user, to customize how the homing operation happens. When using sensorless, this is important, as it lets us adjust things like the current used for homing, etc. More on this later.
+
+**NOTE NOTE NOTE: IF YOU DO NOT READ THIS CAREFULLY AND ADJUST THINGS WHEN NEEDED (I.E. IN STEP 9 ABOVE) YOU WILL BE SAD. MY 2.4 IS CONFIGURED FOR TAP. IF YOU USE AN ENDSTOP YOU MUST CHANGE THINGS TO HOME Z TO THE ENDSTOP PIN, NOT THE MIDDLE OF THE BED. YOU HAVE BEEN WARNED!**
 
 ## Updating stepper_x
 
