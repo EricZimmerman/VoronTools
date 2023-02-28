@@ -9,7 +9,7 @@ Some of this information has been sourced from Clee's guide, found [here](https:
 1. Power off the printer gracefully
 2. Physically disconnect the X and Y endstop connections from the MCU.
 3. Plug in jumpers on the `DIAG` ports as shown below (**J16** and **J17**)
-    ![image](https://user-images.githubusercontent.com/4265254/220795751-2e0d0f17-289d-4d31-b9ee-1eeced93b2e1.png)
+    ![image](img/sensorless/OctoDiag.png)
 4. Start up the printer and wait for it to boot
 5. MAKE A BACKUP OF YOUR CONFIG (or better yet go do [this](https://docs.vorondesign.com/community/howto/EricZimmerman/BackupConfigToGithub.html))
 6. Create a new file in the location of your choosing named `homing.cfg`
