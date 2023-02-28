@@ -13,7 +13,7 @@ Some of this information has been sourced from Clee's guide, found [here](https:
 6. Create a new file in the location of your choosing named `homing.cfg`
 7. Open another browser tab and open [this](https://github.com/EricZimmerman/Voron24/blob/master/macros/helpers/homing.cfg) page if you have a 2.4, or [this](https://github.com/EricZimmerman/Voron02/blob/master/macros/helpers/homing.cfg) page if you have a v0.
 8. Edit `homing.cfg` 
-9. **Add** the macro from step 7 to `homing.cfg`. Be sure to edit the coordinates as needed for your bed in the Z section (the line that reads **G1 X175 Y175 F15000**). IE to the center of the bed, your endstop pin for z, etc.
+9. **Add** the macro from step 7 to `homing.cfg`. **_Be sure to edit the coordinates as needed for your bed in the Z section (the line that reads **G1 X175 Y175 F15000**). IE to the center of the bed, your endstop pin for z, etc._**
 10. Save `homing.cfg` 
 11. Edit your `printer.cfg` file
 12. If you have a `[safe_z_home]` section, find it and comment it out as we will be using homing override as found in `homing.cfg`.
