@@ -33,6 +33,7 @@
     - http://www.chieftek.com/product-mr.asp
     - https://west3d.com/products/west3d-printing-mgn12h-1r-300-350-400-linear-rails-with-carriages?variant=42096413376724
     - https://magicphoenix.xyz/product/hiwin-mgn12h-rail-z1pm/
+    - https://pl.aliexpress.com/store/1101541952
     - https://magicphoenix.xyz/product/magicphoenix-mgn9h-rail440c-sus/?cgkit_search_word=mgn9
     - [HiWin](https://www.aliexpress.us/item/3256804644561680.html?spm=a2g0o.detail.0.0.10413a0dEpkCL3&gps-id=pcDetailBottomMoreThisSeller&scm=1007.13339.291025.0&scm_id=1007.13339.291025.0&scm-url=1007.13339.291025.0&pvid=0a6664a0-63c5-48a0-9299-b191563f229f&_t=gps-id%3ApcDetailBottomMoreThisSeller%2Cscm-url%3A1007.13339.291025.0%2Cpvid%3A0a6664a0-63c5-48a0-9299-b191563f229f%2Ctpp_buckets%3A668%232846%238112%231997&pdp_ext_f=%7B%22sku_id%22%3A%2212000030650257808%22%2C%22sceneId%22%3A%223339%22%7D&pdp_npi=2%40dis%21USD%2145.0%2145.0%21%21%21%21%21%402103222416753505011107272ed26c%2112000030650257808%21rec&gatewayAdapt=glo2usa&_randl_shipto=US)
 - Motors
