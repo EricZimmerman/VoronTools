@@ -39,7 +39,7 @@ Summarized from [here](https://github.com/maz0r/klipper_canbus/blob/main/control
 # U2C
 
 Note that the U2C does not need much done to it, short of making sure it has the newest firmware from BTT that fixed an earlier
-issue with not being able to use CANBoot to flash things behind the U2C on older firmware. Once you do the steps below, you do not
+issue with not being able to use Katapult to flash things behind the U2C on older firmware. Once you do the steps below, you do not
 have to touch the U2C again
 
 1. Make sure you have the latest firmware for the U2C from BTT, which is available [here](https://github.com/Arksine/CanBoot/issues/44#issuecomment-1381555466): 
@@ -55,7 +55,7 @@ have to touch the U2C again
     - Unplug and replug in the usb cable for the u2c to reset it
     - The CAN interface should now be back up
     - Start klipper `sudo systemctl start klipper`
-    - Follow the steps to compile and flash canboot to the EBB (more on this later)
+    - Follow the steps to compile and flash katapult to the EBB (more on this later)
     - Follow the steps to compile and flash klipper over CAN (more on this later)
     - Success
 3. When this is done, ADD THE JUMPER for the 120 ohm resistor to the U2C and set the U2C aside
@@ -64,17 +64,17 @@ have to touch the U2C again
 
 # EBB
 
-## Building CanBoot
+## Building Katapult (formerly known as CanBoot)
 
-1. Clone the CanBoot repository to your pi
+1. Clone the Katapult repository to your pi
     ```bash
     cd ~
-    git clone https://github.com/Arksine/CanBoot
+    git clone https://github.com/Arksine/katapult
     ```
 
 2. Run the following commands to bring up the menu to configure the firmware
     ```bash
-    cd CanBoot
+    cd katapult
     make menuconfig
     ```
     
@@ -89,7 +89,9 @@ have to touch the U2C again
     ```
     ![image](img/ebb/CanBootFirmware.png)
 
-## Flashing CanBoot to the EBB
+   **NOTE**: This screenshot refers to the older name, CanBoot. Newer installations (post late July, 2023) will use the `katapult` directory.
+
+## Flashing Katapult to the EBB
 
 1. Add a jumper as shown in the image below so the board can be powered via a USB connection
     ![image](img/ebb/EBBButtons.png)
@@ -103,9 +105,9 @@ have to touch the U2C again
     Bus 001 Device 005: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
     ```
 5. Record the device ID (the part after `ID` above, but yours may be different)
-6. Run the following command to erase and flash the EBB with CanBoot (again, VERIFY your device ID. The ID is at the end of the command below):
+6. Run the following command to erase and flash the EBB with Katapult (again, VERIFY your device ID. The ID is at the end of the command below):
     ```
-    sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
+    sudo dfu-util -a 0 -D ~/katapult/out/katapult.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
     ```
 7. The board will now be flashed. It will look similar to what is shown below. NOTE: If you see any mention of an error after the `File downloaded successfully` message, it can be ignored.
 
@@ -142,7 +144,7 @@ TRIPLE CHECK your plarity and wiring here. The BTT stuff is not the same on both
 
 Once you have the cable wired up (I used the molex connection), plug it into the toolhead and the U2C (or however you decided to power things up.
 
-# Verifying you see CanBoot and flashing Klipper to the EBB
+# Verifying you see Katapult and flashing Klipper to the EBB
 
 (Some steps taken from [here](https://github.com/maz0r/klipper_canbus/blob/main/toolhead/ebb36-42_v1.1.md), which you should review as well)
 
