@@ -41,7 +41,7 @@ This is useful if you use the pi to handle adxl processing, etc.
 
 On restart, klipper should show most current version in Mailsail
 
-# Update klipper firmware via CanBOOT (An EBB36 1.2 in this example)
+# Update klipper firmware via Katapult (formerly CanBOOT) (An EBB36 1.2 in this example)
 
 1. Build firmware per your mcu's requirements
 
@@ -53,6 +53,7 @@ On restart, klipper should show most current version in Mailsail
     sudo service klipper stop
     python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u MYUUID
     ```
+NOTE: If you have a newer install (post late July, 2023), you will most likely have `~/katapult/` vs `~/CanBoot/` directory
     
 3. Review the output to make sure everything worked OK! (Your UUID will of course be different)
     
