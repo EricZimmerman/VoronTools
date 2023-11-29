@@ -173,12 +173,13 @@ At this point, after checking twice that everything is connected correctly, powe
     [mcu can0]
     canbus_uuid: 2c77b9d71a11
     ```
-5. Replace `2c77b9d71a11` with **YOUR UUID**
+5. Replace `2c77b9d71a11` with **YOUR UUID** 
 
 6. Save the file, exit nano, and then add this to your printer.cfg:
     ```bash
     [include toolhead_btt_ebbcan_G0B1_v1.2.cfg]
     ```
+    Note that once you do this and restart Klipper, the UUID will NOT SHOW anymore when querying the can interface
 
 # Now what?
 
