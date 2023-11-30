@@ -66,3 +66,23 @@ NOTE: If you have a newer install (post late July, 2023), you will most likely h
     ```
     
 On restart, klipper should show most current version in Mailsail
+
+# Update klipper firmware via Katapult on SKR Pico via UART
+
+To get Katapult on the Pico initially, go here:
+
+https://github.com/Polar-Ted/RP2040Canboot_Install#canboot-for-skr-pico-in-uart-mode
+
+I connected my Pico to a Windows PC and copied the klipper.uf2 file to the drive that popped up in Windows. This flashes Katapult bootloader
+
+1. build firmware and compile with make -j 4
+
+   ![skr_pico_klipper_canbus_uart](https://github.com/EricZimmerman/VoronTools/assets/4265254/dd892ab5-d35d-4e9f-92df-5f18b6a33eb6)
+
+2. Press reset button twice to get into bootloader
+3. Run
+   ```bash
+   sudo python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/ttyAMA0
+   ```
+4. Restart firmware
+
