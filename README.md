@@ -14,7 +14,7 @@ This is a landing page for my other Voron related stuff
 - [CANBus and EBB36/U2C setup](EBB_CAN.md)
 - [Sensorless homing on an Octopus MCU](Sensorless.md)
 
-- [Backup your printer configurations to Github](https://docs.vorondesign.com/community/howto/EricZimmerman/BackupConfigToGithub.html)
+- [Backup your printer configurations to Github](https://github.com/EricZimmerman/Voron-Documentation/blob/main/community/howto/EricZimmerman/BackupConfigToGithub.md)
 - [PRINT_START and you: Using Slicers and PRINT_START macros](https://docs.vorondesign.com/community/howto/EricZimmerman/SlicerAndPrintStart.html)
 
 - [Other howtos](HOWTO.md)
