@@ -80,6 +80,8 @@ have to touch the U2C again
     
 3. Starting from the top, make your firmware selections look exactly like the image below
     ![image](img/ebb/CanBootConfig.png)
+
+    NOTE: For Status LED GPIO Pin, be sure to enter 'PA13'
     
 4. Exit using `ESC` or `Q`, then confirm with yes (`Y`)
 5. Build the firmware using the following commands:
