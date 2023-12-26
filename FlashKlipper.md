@@ -10,7 +10,7 @@ This is useful if you use the pi to handle adxl processing, etc.
 5. save and exit
 6. Run command below
 
-    ```
+    ```bash
     sudo service klipper stop
     make flash
     sudo service klipper start
@@ -23,7 +23,7 @@ This is useful if you use the pi to handle adxl processing, etc.
 
     ![image](img/howto/Octo11FirmwareSettings.jpg)
 
-    ```
+    ```bash
     cd ~/klipper
     make clean
     make menuconfig
@@ -31,13 +31,14 @@ This is useful if you use the pi to handle adxl processing, etc.
 
 4. Q and save when prompted
 5. Flash with command below (ADJUST YOUR ID ACCORDINGLY. You can get it with **ls /dev/serial/by-id/** command in the shell)
-    ```
+
+   ```bash
     sudo service klipper stop
     make flash FLASH_DEVICE=/dev/serial/by-id/usb-Klipper_stm32f446xx_310012001550324E31333220-if00
     sudo service klipper start
     ```
-6. ???
-7. Profit
+7. ???
+8. Profit
 
 On restart, klipper should show most current version in Mailsail
 
@@ -45,14 +46,15 @@ On restart, klipper should show most current version in Mailsail
 
 1. Build firmware per your mcu's requirements
 
-   ![image](img/howto/ebb3612FirmwareSettings.jpg)
+   ![image](img/ebb/CanBootConfig.png)
    
-2. Run the following commands, swapping out your MYUUID as needed
+2. Run the following commands, swapping out your **<your uuid>** as needed
 
-    ```
+    ```bash
     sudo service klipper stop
-    python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u MYUUID
+    python3 ~/katapult/scripts/flashtool.py -i can0 -u <your uuid> -f ~/klipper/out/klipper.bin
     ```
+    
 NOTE: If you have a newer install (post late July, 2023), you will most likely have `~/katapult/` vs `~/CanBoot/` directory
     
 3. Review the output to make sure everything worked OK! (Your UUID will of course be different)
@@ -61,7 +63,8 @@ NOTE: If you have a newer install (post late July, 2023), you will most likely h
    
     
 4. Restart klipper
-    ```
+   
+    ```bash
     sudo service klipper start
     ```
     
@@ -75,14 +78,16 @@ https://github.com/Polar-Ted/RP2040Canboot_Install#canboot-for-skr-pico-in-uart-
 
 I connected my Pico to a Windows PC and copied the klipper.uf2 file to the drive that popped up in Windows. This flashes Katapult bootloader
 
-1. build firmware and compile with make -j 4
+1. Build firmware and compile with make -j 4
 
    ![skr_pico_klipper_canbus_uart](https://github.com/EricZimmerman/VoronTools/assets/4265254/dd892ab5-d35d-4e9f-92df-5f18b6a33eb6)
 
 2. Press reset button twice to get into bootloader
 3. Run
+
    ```bash
-   sudo python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/ttyAMA0
+   sudo service klipper stop
+   sudo python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/ttyAMA0
    ```
 4. Restart firmware
 
