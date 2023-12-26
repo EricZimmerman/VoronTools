@@ -1,4 +1,6 @@
-This is a quick write up on how do deal with BTT parts as it relates to CAN. This in no way is meant to take away from the awesome work that Maz0r did, which is [here](https://github.com/maz0r/klipper_canbus/).
+This is a quick write up on how do deal with BTT parts as it relates to CAN. This in no way is meant to take away from the awesome work that Maz0r did, which is [here](https://github.com/maz0r/klipper_canbus/). This site is mostly legacy now.
+
+For additional hardware, check out [Esoterical's](https://github.com/Esoterical/voron_canbus) site
 
 Rather, this document covers using the U2C 2.1 and EBB36 to get CAN going for a typical setup.
 
@@ -19,7 +21,7 @@ If you do not have a bench power supply, consider getting one as this can make y
 
 # Pi
 
-Summarized from [here](https://github.com/maz0r/klipper_canbus/blob/main/controller/u2c.md)
+Summarized from [here](https://github.com/Esoterical/voron_canbus)
 
 1. Use nano to create a new file with the command `sudo nano /etc/network/interfaces.d/can0`
 2. Add the following code
@@ -34,7 +36,29 @@ Summarized from [here](https://github.com/maz0r/klipper_canbus/blob/main/control
 
 3. Save the file with `CTRL-x` and reboot the pi with `sudo reboot`
 
-4. Verify the network via `ip -s link show can0` which should reflect that the CAN network is UP. If the network is not found, connect your U2C via USB and repeat the command to verify the `can0` network is up.
+4. Use nano to create a new file with the command `sudo nano /etc/systemd/network/10-can.link`
+5. Add the following code then save and exit nano
+    ```bash
+    [Match]
+    Type=can
+    
+    [Link]
+    TransmitQueueLength=1024
+    ```
+
+6. Use nano to create a new file with the command `sudo nano /etc/systemd/network/25-can.network`
+7. Add the following code then save and exit nano
+    ```bash
+    [Match]
+    Name=can*
+    
+    [CAN]
+    BitRate=1M
+    ```
+
+8. Verify the network via `ip -s link show can0` which should reflect that the CAN network is UP. If the network is not found, connect your U2C via USB and repeat the command to verify the `can0` network is up.
+
+While all of those steps might not me 100% necessary on every system, doing all three should cover your bases regardless.
 
 # U2C
 
@@ -81,7 +105,7 @@ have to touch the U2C again
 3. Starting from the top, make your firmware selections look exactly like the image below
     ![image](img/ebb/CanBootConfig.png)
 
-    NOTE: For Status LED GPIO Pin, be sure to enter 'PA13'
+    NOTE: For Status LED GPIO Pin, be sure to enter **PA13**
     
 4. Exit using `ESC` or `Q`, then confirm with yes (`Y`)
 5. Build the firmware using the following commands:
@@ -91,7 +115,7 @@ have to touch the U2C again
     ```
     ![image](img/ebb/CanBootFirmware.png)
 
-   **NOTE**: This screenshot refers to the older name, CanBoot. Newer installations (post late July, 2023) will use the `katapult` directory.
+   **NOTE**: This screenshot refers to the newer name, Katapult. Newer installations (post late July, 2023) will use the `CanBoot` directory.
 
 ## Flashing Katapult to the EBB
 
