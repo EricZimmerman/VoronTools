@@ -184,6 +184,7 @@ At this point, after checking twice that everything is connected correctly, powe
 3. Exit, saving the changes, then build klipper by typing `make`
 4. Find your UUID by running this command:
     ```bash
+    sudo service klipper stop
     python3 ~/katapult/scripts/flashtool.py -i can0 -q
     ```
 5. It should return something like:
@@ -205,6 +206,12 @@ At this point, after checking twice that everything is connected correctly, powe
    ```
 
    but now, notice how it shows **Klipper** for the application! Yay!
+
+9. Restart klipper via
+
+   ```bash
+   sudo service klipper start
+   ```
 
    For the steps to UPDATE Klipper via CAN, see [here](https://github.com/EricZimmerman/VoronTools/blob/main/FlashKlipper.md#update-klipper-firmware-via-katapult-formerly-canboot-an-ebb36-12-in-this-example) or [here](https://github.com/Esoterical/voron_canbus/tree/main/toolhead_flashing#updating-klipper-firmware-via-katapult)
 
