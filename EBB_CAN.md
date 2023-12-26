@@ -27,9 +27,9 @@ Summarized from [here](https://github.com/maz0r/klipper_canbus/blob/main/control
     allow-hotplug can0
     iface can0 can static
      bitrate 1000000
-     up ifconfig $IFACE txqueuelen 512
+     up ifconfig $IFACE txqueuelen 1024
      pre-up ip link set can0 type can bitrate 1000000
-     pre-up ip link set can0 txqueuelen 512
+     pre-up ip link set can0 txqueuelen 1024
      ```
 
 3. Save the file with `CTRL-x` and reboot the pi with `sudo reboot`
