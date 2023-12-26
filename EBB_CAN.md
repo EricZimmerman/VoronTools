@@ -172,14 +172,41 @@ Once you have the cable wired up (I used the molex connection), plug it into the
 
 # Verifying you see Katapult and flashing Klipper to the EBB
 
-(Some steps taken from [here](https://github.com/maz0r/klipper_canbus/blob/main/toolhead/ebb36-42_v1.1.md), which you should review as well)
+(Some steps taken from [here](https://github.com/Esoterical/voron_canbus), which you should review as well)
 
 At this point, after checking twice that everything is connected correctly, power up the printer and SSH into the Pi.
 
-1. Open [this](https://github.com/maz0r/klipper_canbus/blob/main/toolhead/ebb36-42_v1.1.md) webpage
-2. Scroll down to step 9
-3. Do what it says, making sure to use a CAN bus speed of `1000000` vs 500000
-4. Follow the rest of the page until the end, where it directs you to the config file
+1. Change directories into the klipper directory via `cd ~/klipper`
+2. type `make menuconfig` and adjust things so it looks like the screenshot below
+
+    ![image](img/ebb/EBBKlipper.png)
+
+3. Exit, saving the changes, then build klipper by typing `make`
+4. Find your UUID by running this command:
+    ```bash
+    python3 ~/katapult/scripts/flashtool.py -i can0 -q
+    ```
+5. It should return something like:
+
+    ```
+    "Detected UUID: XXXXXXXXXX, Application: Katapult"
+    ```
+
+6. Record the UUID. This is YOUR uuid and will be used for the next step and in your cfg files.
+7. Now its time to flash klipper via CAN! Run the following command, substituting your uuid:
+
+   ```bash
+   python3 ~/katapult/scripts/flashtool.py -i can0 -u b6d9de35f24f -f ~/klipper/out/klipper.bin
+   ```
+8. The EBB will be flashed and you should see a message about success, etc. Requery for uuids again via:
+
+   ```bash
+    python3 ~/katapult/scripts/flashtool.py -i can0 -q
+   ```
+
+   but now, notice how it shows **Klipper** for the application! Yay!
+
+   For the steps to UPDATE Klipper via CAN, see [here](https://github.com/EricZimmerman/VoronTools/blob/main/FlashKlipper.md#update-klipper-firmware-via-katapult-formerly-canboot-an-ebb36-12-in-this-example) or [here](https://github.com/Esoterical/voron_canbus/tree/main/toolhead_flashing#updating-klipper-firmware-via-katapult)
 
 # Wiring up a config file
 
@@ -189,7 +216,7 @@ At this point, after checking twice that everything is connected correctly, powe
     wget https://raw.githubusercontent.com/maz0r/klipper_canbus/main/toolhead/example_configs/toolhead_btt_ebbcan_G0B1_v1.2.cfg
     ```
 
-2. Edit the file using nano
+2. Edit the file using nano 
     ```bash
     nano toolhead_btt_ebbcan_G0B1_v1.2.cfg
     ```
