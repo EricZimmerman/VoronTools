@@ -46,7 +46,7 @@ On restart, klipper should show most current version in Mailsail
 
 1. Build firmware per your mcu's requirements
 
-   ![image](img/ebb/Ebb36Config.png)
+   ![image](img/howto/Ebb36Config.png)
    
 2. Run the following commands, swapping out your **<your uuid>** as needed
 
