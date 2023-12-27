@@ -87,7 +87,7 @@ I connected my Pico to a Windows PC and copied the klipper.uf2 file to the drive
 
    ```bash
    sudo service klipper stop
-   sudo python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/ttyAMA0
+   sudo python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/ttyS0
    ```
 4. Restart firmware
 
