@@ -100,8 +100,7 @@ Note this is a JST PH plug, so if you do not have one, get a kit or something (I
 
 Also, the iCrimp IWS-3220M crimpers are AWESOME! Thanks for the recommend Joel!
 
-
-# Wrapping up
+# Wrapping the toolhead up
 
 Once I had all the parts and pieces in place, I connected the toolhead to the CAN cable, hung it off the gantry, and fired up the printer. I then verified that the part cooling fan started via Mainsail, verified the hot end fan came on by bumping the extruder to 55 degrees, etc. I also verified the Neopixels were functional.
 
@@ -119,8 +118,90 @@ The right:
 
 <img src='img/xol/XolRight.jpg' width=400 />
 
+# Installation
+
+The Xol site has great documentation on installing everything. Just make sure you verify against MGN9 vs 12 and you will be fine. 
+
+When installing the belts, you might have to trim things a touch so you do not have TOO much slack. What I did was loosen front idlers all the way (Clee's BFI), put the belt through the clips, and see how it feels. If it is really floppy you wont be able to tighten the idlers enough (or rather, when you do the belt will pinch against the front and not move. Ask me how I know). I ended up folding about 5 or 6 teeth back onto itself and then pressing the double folded belt into the clip. When you do this right, the pin should slip nicely between the belts and the clip hole, then snap ever so crisply into place.
+
+<img src='img/xol/BeltClip.png' width=400 />
+
 # Verifying settings  
   
-DW.Tas has some [notes](https://github.com/DW-Tas/Klicky-00/blob/main/images/Klicky-00%20software%20%5Bunfiled%20notes%5D.pdf) you can review to make sure you have various Klicky settings correct
+DW.Tas has some [notes](https://github.com/DW-Tas/Klicky-00/blob/main/images/Klicky-00%20software%20%5Bunfiled%20notes%5D.pdf) you can review to make sure you have various Klicky settings correct, but I pulled everything from that document into what is shown below.
+
+1. Verify **[probe]** `x_offset` and `y_offset` are 0
+
+2. Set
+  ```
+  [stepper_z]
+  position_min: -25 #Just for testing with probe_calibrate. document what this was before you change it.
+  ```
+
+3. Determine `homing_retract_dist` from **[stepper_z]**
+
+4. Do the following:
+
+  ```
+  G28
+  QUAD_GANTRY_LEVEL
+  G28 Z
+  ```
+
+5. Attach the probe with whatever macro you need
+6. Drive toolhead to middle of bed
+7. Run PROBE_CALIBRATE
+
+    NOTE: In my case, with Klippain, klipper threw an error with the above command (an alias). Theres reports of Klippy macros doing it too, so in this case, run the native commands:
+
+     Klicky: _PROBE_CALIBRATE
+     Klippain: _BASE_PROBE_CALIBRATE
+  
+    In this scenario it works a bit different:
+  
+    - The probe will touch the bed a few times
+    - MANUALLY remove the probe
+    - Do the paper test or use a .1mm feeler gauge to get to the point of friction
+    - Type **ACCEPT** in the console
+    - Record the `z_offset` value for the probe as listed in the console
+
+9. REVERT **[stepper_z]** `position_min` to its original value
+10. UPDATE **[probe]** `z_offset` with the new value from above
+11. Make other adjustments based on the value of `z_offset`
+
+    - Klicky or Klippain variables:
+        - Klicky:
+          - variable_safe_z: (probe z offset) + 5
+        - Klippain:
+          - variable_probe_min_z_travel: (probe z offset) + 5
+
+    - In **[quad_gantry_level]**
+        - `horizontal_move_z` == (probe z offset) + 5
+    - In **[bed_mesh]**
+        - `horizontal_move_z` == (probe z offset) + homing_retract_dist
+
+Here is an example of what mine ended up looking like:
+
+```
+[probe]
+x_offset: 0
+y_offset: 0
+z_offset: 17.635 # bigger == more squish
+samples_tolerance: 0.007
+sample_retract_dist: 0.8
+speed: 12
+lift_speed: 24
+```
+
+```
+[quad_gantry_level]
+horizontal_move_z: 22.5
+```
+```
+[bed_mesh]
+horizontal_move_z: 20.5
+```
+
+Note that I am only showing the fields that changed, so depending on your setup, you may have more values in your config blocks.
 
 Once everything is installed, home x and y, verify your dock position, test docking and undocking, then send it!
