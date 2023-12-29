@@ -46,7 +46,7 @@ On restart, klipper should show most current version in Mailsail
 
 1. Build firmware per your mcu's requirements
 
-   ![image](img/ebb/CanBootConfig.png)
+   ![image](img/howto/Ebb36Config.png)
    
 2. Run the following commands, swapping out your **<your uuid>** as needed
 
@@ -87,7 +87,7 @@ I connected my Pico to a Windows PC and copied the klipper.uf2 file to the drive
 
    ```bash
    sudo service klipper stop
-   sudo python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/ttyAMA0
+   sudo python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/ttyS0
    ```
 4. Restart firmware
 
