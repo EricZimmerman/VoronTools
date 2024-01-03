@@ -34,7 +34,7 @@ Summarized from [here](https://github.com/Esoterical/voron_canbus)
      pre-up ip link set can0 txqueuelen 1024
      ```
 
-3. Save the file with `CTRL-x` and reboot the pi with `sudo reboot`
+3. Save the file with `CTRL-o`, ENTER, `CTRL-x` and reboot the pi with `sudo reboot`
 
 4. Use nano to create a new file with the command `sudo nano /etc/systemd/network/10-can.link`
 5. Add the following code then save and exit nano
