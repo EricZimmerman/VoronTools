@@ -10,6 +10,7 @@ This is a landing page for my other Voron related stuff
 
 ## How tos:
 
+- [XOL Reboot and Klicky00](XolRebootKlicky00.md)
 - [Updating Klipper from the Pi](FlashKlipper.md)
 - [CANBus and EBB36/U2C setup](EBB_CAN.md)
 - [Sensorless homing on an Octopus MCU](Sensorless.md)
