@@ -68,7 +68,7 @@ NOTE: If you have a newer install (post late July, 2023), you will most likely h
     sudo service klipper start
     ```
     
-On restart, klipper should show most current version in Mailsail
+On restart, klipper should show most current version in Mainsail
 
 # Update klipper firmware via Katapult on SKR Pico via UART
 
