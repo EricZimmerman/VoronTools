@@ -52,7 +52,7 @@ On restart, klipper should show most current version in Mailsail
 
     ```bash
     sudo service klipper stop
-    python3 ~/katapult/scripts/flashtool.py -i can0 -u <your uuid> -f ~/klipper/out/klipper.bin
+    python3 ~/katapult/scripts/flashtool.py -i can0 -u 49a0b081f32c -f ~/klipper/out/klipper.bin
     ```
     
 NOTE: If you have a newer install (post late July, 2023), you will most likely have `~/katapult/` vs `~/CanBoot/` directory
