@@ -6,7 +6,7 @@ Stop dealing with an old version of your OS and upgrade to the latest and greate
 
 - BACKUP YOUR CONFIGS (use [this](https://github.com/EricZimmerman/Voron-Documentation/blob/main/community/howto/EricZimmerman/BackupConfigToGithub.md) if you want to back up to GitHub)
 - BACKUP YOUR CONFIGS AGAIN
-- VERIFY THE BACKUP YOUR CONFIGS
+- VERIFY THE BACKUP OF YOUR CONFIGS
 - Turn off printer
 - Pull SD card (if you have another SD card, use that and your working OS will stay as is for now)
 - Use raspberry pi imager and install Bookworm LITE, 64 bit (NOT DESKTOP)
