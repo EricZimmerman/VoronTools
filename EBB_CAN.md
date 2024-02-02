@@ -152,7 +152,7 @@ I have 24v and ground going INTO the U2C to supply voltage to all the other conn
 
 NOTE: Once you connect your U2C to USB, you should see two little lights turn on. If you do not see this, you may have a bad USB cable.
 
-Note that the Octopus _should not be connected to the USB C port_, this is just illustrating overall connectivity.
+Note that the Octopus _should not be connected to the USB C port!_
 
 ![image](img/ebb/EBBCANSetup.png)
 
