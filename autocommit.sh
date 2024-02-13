@@ -65,6 +65,8 @@ grab_version(){
 }
 
 # Here we dump stats database to text format for backup, IF the right software is found
+# To RESTORE the database, use the following command:
+# mdb_load -f ~/printer_data/config/data.mdb.backup -s -T ~/printer_data/database/
 
 if command -v /usr/bin/mdb_dump &> /dev/null
 then
