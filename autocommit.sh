@@ -72,6 +72,8 @@ if command -v /usr/bin/mdb_dump &> /dev/null
 then
     echo "mdb_dump found! Exporting data.mdb to ~/printer_data/config/data.mdb.backup"
     mdb_dump -a -n ~/printer_data/database/data.mdb -f ~/printer_data/config/data.mdb.backup
+    echo "NOTE: THIS DUMPS THE authorized_users TABLE FROM DATA.MDB. IF YOU HAVE SENSITIVE INFORMATION IN THERE, PROTECT THIS BACKUP FILE!"
+    echo "Adjust the command above to 'mdb_dump -s history ~/printer_data/database/ ~/printer_data/config/history_data.mdb.backup' if you prefer to only backup your history!"
 else
     echo "mdb_dump not found! Consider installing it via 'sudo apt install lmdb-utils' if you want to back up your statistics database!"
 fi
