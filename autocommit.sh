@@ -34,6 +34,10 @@ mainsail_folder=~/mainsail
 ### By default that is 'main'
 branch=main
 
+### Set this to true if you want ONLY the history table to be dumped
+### from data.mdb.
+history_only=false
+
 #####################################################################
 #####################################################################
 
@@ -70,10 +74,14 @@ grab_version(){
 
 if command -v /usr/bin/mdb_dump &> /dev/null
 then
-    echo "mdb_dump found! Exporting data.mdb to ~/printer_data/config/data.mdb.backup"
-    mdb_dump -a -n ~/printer_data/database/data.mdb -f ~/printer_data/config/data.mdb.backup
-    echo "NOTE: THIS DUMPS THE authorized_users TABLE FROM DATA.MDB. IF YOU HAVE SENSITIVE INFORMATION IN THERE, PROTECT THIS BACKUP FILE!"
-    echo "Adjust the command above to 'mdb_dump -s history ~/printer_data/database/ ~/printer_data/config/history_data.mdb.backup' if you prefer to only backup your history!"
+    if $history_only
+    then
+        echo "mdb_dump found! Exporting history table from data.mdb to ~/printer_data/config/data.mdb.backup"
+        mdb_dump -s history -n ~/printer_data/database/data.mdb -f ~/printer_data/config/data.mdb.backup
+    else
+        echo "mdb_dump found! Exporting ALL tables data.mdb to ~/printer_data/config/data.mdb.backup"
+        mdb_dump -a -n ~/printer_data/database/data.mdb -f ~/printer_data/config/data.mdb.backup
+    fi
 else
     echo "mdb_dump not found! Consider installing it via 'sudo apt install lmdb-utils' if you want to back up your statistics database!"
 fi
