@@ -102,10 +102,10 @@ Next we set the motors to use our homing current
 Here we force a move away from the toolhead's current position. We are telling the printer it is currently at X=15 (which may or may not be true), then moving the toolhead 15mm from that position. This ensures that if we are right on the rightmost rail we will move away from it BEFORE we try to home.
 
 ```
-    G4 P2000
+    M400
     G28 X
 ```
-Next we pause a full 2 seconds to let the StallGuard driver clear before we try to home.
+Next we use M400 to clear any commands (including stallguard) in the buffer before we try to home.
 
 ```
     # Move away
