@@ -154,6 +154,166 @@ With X complete, you how have to do that entire process all over again, but for 
 
 Now do exactly the same process as you did for X, but this time, focusing on the Y axis. When homing Y, the toolhead will move toward you for the reasons described above, just like we saw when setting up X.
 
+## Some working examples
+
+Note that these examples are just that, examples! Do not just YOLO copy paste stuff. This is more about showing things like the diag pin (1 vs 0), etc.
+
+For any aliases shown, either create them, or simply update them with the actual pins, per your preference
+
+### BTT Octopus Pro 1.0 with BTT2240s
+
+```
+[stepper_x]
+step_pin: PF13
+dir_pin: !PF12
+enable_pin: !PF14
+rotation_distance: 40
+microsteps: 32
+full_steps_per_rotation:400  #set to 400 for 0.9 degree stepper
+endstop_pin: tmc2240_stepper_x:virtual_endstop       # Old pin before sensorless homing PG6
+position_min: 0
+
+[stepper_y]
+step_pin: PG0
+dir_pin: !PG1
+enable_pin: !PF15
+rotation_distance: 40
+microsteps: 32
+full_steps_per_rotation:400  #set to 400 for 0.9 degree stepper
+endstop_pin: tmc2240_stepper_y:virtual_endstop     # Old pin before sensorless homing PG9
+position_min: 0
+
+[tmc2240 stepper_x]
+cs_pin: PC4
+spi_software_sclk_pin: PA5
+spi_software_mosi_pin: PA7
+spi_software_miso_pin: PA6
+interpolate: false
+run_current: 0.8
+stealthchop_threshold: 0
+diag0_pin: ^!PG6
+driver_SGT: 0            #Max sensitivity -63
+
+[tmc2240 stepper_y]
+cs_pin: PD11
+spi_software_sclk_pin: PA5
+spi_software_mosi_pin: PA7
+spi_software_miso_pin: PA6
+interpolate: false
+run_current: 0.8
+stealthchop_threshold: 0
+diag0_pin: ^!PG9
+driver_SGT: 1   #Max sensitivity -63
+```
+
+### BTT Kraken with 2160s
+
+```
+[stepper_x]
+rotation_distance = 40
+microsteps = 32
+full_steps_per_rotation = 400
+step_pin = X_STEP
+dir_pin = !X_DIR
+enable_pin = !X_ENABLE
+endstop_pin = tmc5160_stepper_x:virtual_endstop
+homing_speed = 80
+homing_retract_dist = 0
+position_min = 0
+position_max = 350
+position_endstop = 350
+
+
+[stepper_y]
+rotation_distance = 40
+microsteps = 32
+full_steps_per_rotation = 400
+step_pin = Y_STEP
+dir_pin = !Y_DIR
+enable_pin = !Y_ENABLE
+endstop_pin = tmc5160_stepper_y:virtual_endstop
+homing_speed = 80
+homing_retract_dist = 0
+position_min = 0
+position_max = 350
+position_endstop = 350
+
+[tmc5160 stepper_x]
+cs_pin = X_TMCUART
+spi_software_sclk_pin = DRIVER_SPI_SCK
+spi_software_mosi_pin = DRIVER_SPI_MOSI
+spi_software_miso_pin = DRIVER_SPI_MISO
+interpolate = True
+run_current = 1
+sense_resistor = 0.022
+stealthchop_threshold = 0
+driver_sgt = -1
+diag1_pin = ^!X_STOP
+
+[tmc5160 stepper_y]
+cs_pin = Y_TMCUART
+spi_software_sclk_pin = DRIVER_SPI_SCK
+spi_software_mosi_pin = DRIVER_SPI_MOSI
+spi_software_miso_pin = DRIVER_SPI_MISO
+interpolate = True
+run_current = 1
+sense_resistor = 0.022
+stealthchop_threshold = 0
+driver_sgt = -1
+diag1_pin = ^!Y_STOP
+```
+
+### BTT Octopus 1.1 with 2209s
+
+```
+[stepper_x]
+step_pin: X_STEP
+dir_pin: X_DIR
+enable_pin: !X_ENABLE
+rotation_distance: 40
+microsteps: 32
+full_steps_per_rotation:400
+endstop_pin: tmc2209_stepper_x:virtual_endstop #X_STOP
+position_min: 0
+position_endstop: 350
+position_max: 350
+homing_speed: 40 #50
+homing_retract_dist: 0
+homing_positive_dir: true
+
+[tmc2209 stepper_x]
+uart_pin: X_TMCUART
+interpolate: False
+run_current: 1
+sense_resistor: 0.110
+stealthchop_threshold: 0 #always on, 0 is off
+diag_pin: ^X_STOP # use the same pin that was previously the endstop_pin!
+driver_SGTHRS: 125
+
+[stepper_y]
+step_pin: Y_STEP
+dir_pin: Y_DIR
+enable_pin: !Y_ENABLE
+rotation_distance: 40
+microsteps: 32
+full_steps_per_rotation:400
+endstop_pin: tmc2209_stepper_y:virtual_endstop #Y_STOP
+position_min: 0
+position_endstop: 350
+position_max: 350
+homing_speed: 40 #50
+homing_retract_dist: 0
+homing_positive_dir: true
+
+[tmc2209 stepper_y]
+uart_pin: Y_TMCUART
+interpolate: False
+run_current: 1
+sense_resistor: 0.110
+stealthchop_threshold: 0
+diag_pin: ^Y_STOP     # use the same pin that was previously the endstop_pin!
+driver_SGTHRS: 125 # 255 is most sensitive value, 0 is least sensitive
+```
 
 ## Now what?
 
