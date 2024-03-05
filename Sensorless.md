@@ -4,6 +4,8 @@ Some of this information has been sourced from Clee's guide, found [here](https:
 
 **NOTE NOTE NOTE: IF YOU DO NOT READ THIS CAREFULLY AND ADJUST THINGS WHEN NEEDED YOU WILL BE SAD. MY 2.4 IS CONFIGURED FOR TAP. IF YOU USE AN ENDSTOP YOU MUST CHANGE THINGS TO HOME Z TO THE ENDSTOP PIN, NOT THE MIDDLE OF THE BED. YOU HAVE BEEN WARNED!**
 
+At the end of this document is a section with working examples you can use as a reference for some common hardware
+
 # Getting started
 
 1. Power off the printer gracefully
