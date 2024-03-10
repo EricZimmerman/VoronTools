@@ -1,6 +1,6 @@
 This writeup covers building the Xol reboot toolhead from DW.Tas with a Sherpa Mini, EBB36, and 5v Delta fans (from the BOM).
 
-Prior to this rebuild I was running an older XOL build with Tap on the stock MGN12 rail from LDO. For the rebuild, I decided to to MGN9 and as such, ordered three West3D Berzerker rails to replace X and Y LDO rails.
+Prior to this rebuild I was running an older XOL build with Tap on the stock MGN12 rail from LDO. For the rebuild, I decided to to MGN9 and as such, ordered three CPC rails to replace X and Y LDO rails.
 
 
 # Getting started
