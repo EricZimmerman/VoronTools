@@ -317,6 +317,67 @@ diag_pin: ^Y_STOP     # use the same pin that was previously the endstop_pin!
 driver_SGTHRS: 125 # 255 is most sensitive value, 0 is least sensitive
 ```
 
+### Manta M8P v1.1 withBTT 5160 PROs
+
+```
+[stepper_x]
+step_pin: PE2
+dir_pin: !PB4
+enable_pin: !PC11
+microsteps: 32
+rotation_distance: 40
+#endstop_pin: ^PF3
+endstop_pin: tmc5160_stepper_x:virtual_endstop
+position_endstop: 250
+position_min: 0
+position_max: 250
+homing_speed: 100
+homing_retract_dist: 5
+homing_retract_speed: 20
+min_home_dist: 20
+use_sensorless_homing: True
+full_steps_per_rotation: 400
+
+[tmc5160 stepper_x]
+cs_pin: PC10
+run_current: 1.0
+spi_software_sclk_pin: PA5
+spi_software_mosi_pin: PA7
+spi_software_miso_pin: PA6
+home_current: 0.4
+diag1_pin: ^!PF3
+driver_SGT: 1
+
+[stepper_y]
+step_pin: PF12
+dir_pin: !PF11
+enable_pin: !PB3
+microsteps: 32
+rotation_distance: 40
+#endstop_pin: ^PF4
+endstop_pin: tmc5160_stepper_y:virtual_endstop
+position_endstop: 260
+position_min: 0
+position_max: 260
+homing_speed: 100
+homing_retract_dist: 5
+homing_retract_speed: 20
+min_home_dist: 20
+use_sensorless_homing: True
+full_steps_per_rotation: 400
+
+[tmc5160 stepper_y]
+cs_pin: PF13
+run_current: 1.0
+spi_software_sclk_pin: PA5
+spi_software_mosi_pin: PA7
+spi_software_miso_pin: PA6
+home_current: 0.4
+diag1_pin: ^!PF4
+driver_SGT: 1
+
+```
+
 ## Now what?
 
 Thats it! Once you find your StallGuard values for X and Y and update them in your printer.cfg, save and restart, then try homing each axis again. In some cases you will find that your values are not quite right.
