@@ -319,6 +319,8 @@ driver_SGTHRS: 125 # 255 is most sensitive value, 0 is least sensitive
 
 ### Manta M8P v1.1 withBTT 5160 PROs
 
+Note that this example uses Danger Klipper, (use_sensorless_homing: True, home_current: 0.4, etc), so some of those parameters will not exist/be valid if not using DK
+
 ```
 [stepper_x]
 step_pin: PE2
