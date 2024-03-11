@@ -115,7 +115,7 @@ have to touch the U2C again
     ```
     ![image](img/ebb/CanBootFirmware.png)
 
-   **NOTE**: This screenshot refers to the newer name, Katapult. Newer installations (post late July, 2023) will use the `CanBoot` directory.
+   **NOTE**: This screenshot refers to the newer name, Katapult. Older installations (pre late July, 2023) will use the `CanBoot` directory.
 
 ## Flashing Katapult to the EBB
 
@@ -148,7 +148,7 @@ have to touch the U2C again
 
 For my setup, I chose to wire things as shown below.
 
-I have 24v and ground going INTO the U2C to supply voltage to all the other connectors. I then use all 4 wires on the Molex connector to take power and CAN signals to the EBB. The U2C is powered by the USB connection tho, so do not forget that.
+I have 24v and ground going INTO the U2C to supply voltage to all the other connectors. I then use all 4 wires on the Molex connector to take power and CAN signals to the EBB. The U2C is powered by the USB connection though, so do not forget that.
 
 NOTE: Once you connect your U2C to USB, you should see two little lights turn on. If you do not see this, you may have a bad USB cable.
 
@@ -166,7 +166,7 @@ Make your cable and route it however you want. Some people use a gland back the 
 
 Next up is wiring up the plugs for the CAN cable. Refer to the following images from GadgetAngel:
 
-TRIPLE CHECK your plarity and wiring here. The BTT stuff is not the same on both sides (see image above as a reference).
+TRIPLE CHECK your polarity and wiring here. The BTT stuff is not the same on both sides (see image above as a reference).
 
 Once you have the cable wired up (I used the molex connection), plug it into the toolhead and the U2C (or however you decided to power things up.
 
@@ -199,7 +199,7 @@ At this point, after checking twice that everything is connected correctly, powe
    ```bash
    python3 ~/katapult/scripts/flashtool.py -i can0 -u b6d9de35f24f -f ~/klipper/out/klipper.bin
    ```
-8. The EBB will be flashed and you should see a message about success, etc. Requery for uuids again via:
+8. The EBB will be flashed and you should see a message about success, etc. Request for uuids again via:
 
    ```bash
     python3 ~/katapult/scripts/flashtool.py -i can0 -q
