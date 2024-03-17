@@ -1,4 +1,13 @@
 
+# A note about USB-Can bridge
+
+When flashing the sb2040 (or any pure-CAN device) if you run the -f ~/klipper/out/klipper.bin -u <uuid> command it will both kick it into katapult mode and then flash it. 
+You don't have to do the -u <uuid> -r first to pre-emptively kick it into katapult mode.
+
+But for a USB-CAN-Bridge **mainboard**, the Katapult is actually a USB device while the Klipper shows as a UUID. 
+So you can't "flash" to the UUID, you need to flash to the /dev/serial path. 
+In order for that to  show up first you have to kick it into katapult mode with the -u UUID -r first, then you can flash it with -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/<your id>
+
 # Update klipper firmware *on* the pi (mcu)
 
 This is useful if you use the pi to handle adxl processing, etc.
