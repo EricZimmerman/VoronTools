@@ -47,16 +47,12 @@ history_only=false
 #####################################################################
 grab_version(){
   if [ ! -z "$klipper_folder" ]; then
-    cd "$klipper_folder"
-    klipper_commit=$(git rev-parse --short=7 HEAD)
-    m1="Klipper on commit: $klipper_commit"
-    cd ..
+    klipper_commit=$(git -C $klipper_folder describe --always --tags --long | awk '{gsub(/^ +| +$/,"")} {print $0}')
+    m1="Klipper version: $klipper_commit"
   fi
   if [ ! -z "$moonraker_folder" ]; then
-    cd "$moonraker_folder"
-    moonraker_commit=$(git rev-parse --short=7 HEAD)
-    m2="Moonraker on commit: $moonraker_commit"
-    cd ..
+    moonraker_commit=$(git -C $moonraker_folder describe --always --tags --long | awk '{gsub(/^ +| +$/,"")} {print $0}')
+    m2="Moonraker version: $moonraker_commit"
   fi
   if [ ! -z "$mainsail_folder" ]; then
     mainsail_ver=$(head -n 1 $mainsail_folder/.version)
