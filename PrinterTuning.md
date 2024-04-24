@@ -21,7 +21,9 @@ Its just that the order is not optimal, because, for example, acceleration and s
 
 ## Pre-requisites
 
-Either [Klippain](https://github.com/Frix-x/klippain) (for the awesome PA and EM test macros) or at least [Shake n Tune](https://github.com/Frix-x/klippain-shaketune).
+Either [Klippain](https://github.com/Frix-x/klippain) (for the awesome PA and EM test macros) or at least [Shake n Tune](https://github.com/Frix-x/klippain-shaketune)
+
+Some [background](https://www.youtube.com/watch?v=7TtBJAJMfNg) from Reth on Shake n Tune
 
 This guide does not cover establishing your rotation distance, as that is part of the initial Voron startup guide, found [here](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps)
 
@@ -31,9 +33,13 @@ Documentation for this is available [here](https://github.com/Frix-x/klippain-sh
 
 (more info here)
 
+Reth's Belt shaper [video](https://www.youtube.com/watch?v=zfnWsBOt3_8)
+
 ## Input shaper
 
 Documentation for this is available [here](https://github.com/Frix-x/klippain-shaketune/blob/main/docs/macros/axis_tuning.md)
+
+Reth's input shaper [video](https://www.youtube.com/watch?v=fjs4TQc1kZI)
 
 ## Vibrations calibration
 
