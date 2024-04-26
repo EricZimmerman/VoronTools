@@ -5,7 +5,7 @@ This is the best order many of us have found to tune things with your printer:
 1. Belt shaper
 2. Input shaper
 3. Vibrations calibration
-4. Get max accels from #2
+4. Get max accels from #2 (almost always the Y axis recommended shaper/speed)
 5. Get external perimeter speed from #3
 6. Use external perimeter speed and accels for PA test
 7. EM
