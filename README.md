@@ -10,6 +10,7 @@ This is a landing page for my other Voron related stuff
 
 ## How tos:
 
+- Extra extra, read all about it! [Danger Klipper](DangerKlipper.md) FTW
 - [Printer tuning considerations](PrinterTuning.md)
 - [Upgrade your Pi's operating system](OSUpgrade.md)
 - [XOL Reboot and Klicky00](XolRebootKlicky00.md)
