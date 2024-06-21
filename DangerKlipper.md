@@ -25,7 +25,8 @@ So what are some of the things that makes DK worth considering?
 7. Additional features for fans, such as curve vs linear activation, and reverse fans (not that its going backwards, but the lower the temp, the higher the fan RPM)
 8. Cool additions to macros, and hot reloading of macros is being worked on! No more full restarts to test your macros!
 9. Does your probe have high variance on the first probe? DK has you covered, and can drop the first result, leading to lower standard deviation!
-10. and much more
+10. Do you want to reload your macros you are testing without restarting Klipper? RELOAD_GCODE_MACROS can do that for you
+11. and much more
 
 Read about all the awesome stuff in more detail [here](https://dangerklipper.io/Danger_Features.html)
 
