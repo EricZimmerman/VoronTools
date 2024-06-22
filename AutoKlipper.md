@@ -18,7 +18,7 @@ The way this is set up allows us to then automatically back up our firmware conf
 7. Make the script executable via `chmod +x update_klipper.sh`
 8. Edit the configuration file using `nano mcus.ini`
 9. Update for your hardware (see examples below)
-10. Save mcus.ini and exit using `Ctrl-o` and `Ctrl-x`
+10. Save `mcus.ini` and exit using `Ctrl-o` and `Ctrl-x`
 11. Run the script via `./update_klipper.sh`
 
 ## Example mcus.ini files
