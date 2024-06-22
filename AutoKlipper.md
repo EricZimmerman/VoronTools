@@ -1,3 +1,5 @@
+Do you hate updating Klipper and having to flash all your stuff? Can't remember how to do it from the last time? Well now you don't have to remember anything (except once)!
+
 This is a walkthrough for setting up and using the awesome script for updating klipper found [here](https://github.com/fbeauKmi/update_klipper_and_mcus/tree/main)
 
 The way this is set up allows us to then automatically back up our firmware config files AND the settings for updating them to Github, using my tutorial [here](https://github.com/EricZimmerman/Voron-Documentation/blob/main/community/howto/EricZimmerman/BackupConfigToGithub.md).
