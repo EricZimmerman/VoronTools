@@ -12,8 +12,8 @@ The way this is set up allows us to then automatically back up our firmware conf
 4. Change into this new directory using `cd flash`
 5. Download files using these commands:
    ```
-   wget --inet4-only https://raw.githubusercontent.com/fbeauKmi/update_klipper_and_mcus/main/update_klipper.sh
-   wget --inet4-only https://raw.githubusercontent.com/fbeauKmi/update_klipper_and_mcus/main/examples/mcus.ini
+   wget https://raw.githubusercontent.com/fbeauKmi/update_klipper_and_mcus/main/update_klipper.sh
+   wget https://raw.githubusercontent.com/fbeauKmi/update_klipper_and_mcus/main/examples/mcus.ini
    ```
 7. Make the script executable via `chmod +x update_klipper.sh`
 8. Edit the configuration file using `nano mcus.ini`
