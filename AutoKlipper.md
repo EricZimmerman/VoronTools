@@ -21,7 +21,7 @@ The way this is set up allows us to then automatically back up our firmware conf
 
 ## Example mcus.ini files
 
-Note that you MUST update your FLASH_DEVICE path and or your CAN uuid to match YOUR settings
+⚠️ Note that you MUST update your FLASH_DEVICE path and or your CAN uuid to match YOUR settings ⚠️ 
 
 ### Octopus Pro 1.1
 
@@ -53,7 +53,7 @@ action_command: python3 ~/katapult/scripts/flashtool.py -i can0 -u 2ce86205a3c0
 
 When you run the script, it will first do a `git pull` to make sure your klipper is current, then it will walk you through the flashing via Yes/No prompts. 
 
-YOU WILL NEED TO FIND THE CORRECT `make menuconnfig` SETTINGS THE FIRST TIME YOU DO THIS.
+⚠️ ⚠️ YOU WILL NEED TO FIND THE CORRECT `make menuconnfig` SETTINGS THE FIRST TIME YOU DO THIS. ⚠️ ⚠️ 
 
 Get these from [here](https://github.com/EricZimmerman/VoronTools/blob/main/FlashKlipper.md) or [here](https://canbus.esoterical.online/mainboard_flashing/common_hardware.html) or [here](https://canbus.esoterical.online/toolhead_flashing/common_hardware.html), or consult the manufacturers documentation.
 
