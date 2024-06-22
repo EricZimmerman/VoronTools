@@ -1,5 +1,7 @@
+# THIS CAN ALL BE AUTOMATED! Read [this](https://github.com/EricZimmerman/VoronTools/blob/main/AutoKlipper.md)!!!
 
-# A note about USB-Can bridge
+
+## A note about USB-Can bridge
 
 When flashing the sb2040 (or any pure-CAN device) if you run the -f ~/klipper/out/klipper.bin -u <uuid> command it will both kick it into katapult mode and then flash it. 
 You don't have to do the -u <uuid> -r first to pre-emptively kick it into katapult mode.
