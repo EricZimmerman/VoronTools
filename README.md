@@ -6,11 +6,13 @@ This is a landing page for my other Voron related stuff
 
 - [Voron 2.4](https://github.com/EricZimmerman/Voron24)
 - [Voron 0.2](https://github.com/EricZimmerman/Voron02)
+- [K3](https://github.com/EricZimmerman/K3)
 
 
 ## How tos:
 
 - Extra extra, read all about it! [Danger Klipper](DangerKlipper.md) FTW
+- Update Klipper on all the things, [automatically](https://github.com/EricZimmerman/VoronTools/blob/main/AutoKlipper.md)!
 - [Printer tuning considerations](PrinterTuning.md)
 - [Upgrade your Pi's operating system](OSUpgrade.md)
 - [XOL Reboot and Klicky00](XolRebootKlicky00.md)
