@@ -386,7 +386,7 @@ Thats it! Once you find your StallGuard values for X and Y and update them in yo
 
 In those cases, simply adjust the values up or down by 1 (depending on if its hitting to hard, or not homing all the way) then save, restart, and test again.
 
-Eventually you will find that sweet stop.
+Eventually you will find that sweet spot.
 
 Enjoy!
 
