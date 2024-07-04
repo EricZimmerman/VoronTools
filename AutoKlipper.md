@@ -7,7 +7,7 @@ The way this is set up allows us to then automatically back up our firmware conf
 # Getting started
 
 1. SSH into the pi
-2. Get to your  config directory by typing `cd ~printer_data/config`
+2. Get to your  config directory by typing `cd ~/printer_data/config`
 3. Make a new directory to contain the script via `mkdir flash`
 4. Change into this new directory using `cd flash`
 5. Download files using these commands:
