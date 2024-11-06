@@ -7,19 +7,17 @@ The way this is set up allows us to then automatically back up our firmware conf
 # Getting started
 
 1. SSH into the pi
-2. Get to your  config directory by typing `cd ~/printer_data/config`
-3. Make a new directory to contain the script via `mkdir flash`
-4. Change into this new directory using `cd flash`
-5. Download files using these commands:
+2. Install the scripts via
    ```
-   wget https://raw.githubusercontent.com/fbeauKmi/update_klipper_and_mcus/main/update_klipper.sh
-   wget https://raw.githubusercontent.com/fbeauKmi/update_klipper_and_mcus/main/examples/mcus.ini
+   cd ~
+   git clone https://github.com/fbeauKmi/update_klipper_and_mcus.git ukam
    ```
-7. Make the script executable via `chmod +x update_klipper.sh`
-8. Edit the configuration file using `nano mcus.ini`
-9. Update for your hardware (see examples below)
-10. Save `mcus.ini` and exit using `Ctrl-o` and `Ctrl-x`
-11. Run the script via `./update_klipper.sh`
+3. Change into this new directory using `cd ukam`
+4. Make the script executable via `chmod +x ukam.sh`
+5. Edit the configuration file using `nano mcus.ini`
+6. Update for your hardware (see examples below)
+7. Save `mcus.ini` and exit using `Ctrl-o` and `Ctrl-x`
+8. Run the script via `./ukam.sh`
 
 ## Example mcus.ini files
 
@@ -65,7 +63,7 @@ Exit menuconfig the usual way and the script will build klipper, then prompt to 
 
 Keep following the script and when its done, SO ARE YOU!
 
-In the case where you do NOT have any updates for klipper that the script can find (like when you use Mainsail or Fluidd to update klipper), you can flash things by using the `./update_klipper.sh -f` option. The rest of the workflow is the same.
+In the case where you do NOT have any updates for klipper that the script can find (like when you use Mainsail or Fluidd to update klipper), you can flash things by using the `./ukam.sh -f` option. The rest of the workflow is the same.
 
 ## Off to Github
 
