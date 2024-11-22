@@ -36,7 +36,7 @@ The `[homing_override]` block we have in the above macros is now going to be res
 6. Locate the `[tmc2209 stepper_x]` section (usually right below where you just edited)
 7. **Add** `diag_pin` to match what you recorded from step 2, but add a ^ before it.
     Example: `diag_pin: ^PG6`
-8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
+8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`. If you are using [TMC autotune](https://github.com/andrewmcgr/klipper_tmc_autotune), this value will be ignored, you need to set it with `sg4_thrs` in the `[autotune]` section for the X stepper motor.
 
 ## Updating stepper_y
 
@@ -48,7 +48,7 @@ The `[homing_override]` block we have in the above macros is now going to be res
 6. Locate the `[tmc2209 stepper_y]` section (usually right below where you just edited)
 7. **Add** `diag_pin` to match what you recorded from step 2, but add a ^ before it.
     Example: `diag_pin: ^PG9`
-8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
+8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`. If you are using [TMC autotune](https://github.com/andrewmcgr/klipper_tmc_autotune), this value will be ignored, you need to set it with `sg4_thrs` in the `[autotune]` section for the Y stepper motor.
 
 ## Other changes
 
