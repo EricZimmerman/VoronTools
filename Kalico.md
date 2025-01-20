@@ -8,7 +8,7 @@ tl;dr; Its not dangerous at all!
 
 First, what exactly IS Kalico? 
 
-Kalico is a (hard) fork that aims to add features and improvements beyond what is found in mainline Klipper. While this sounds scary, in reality, you can switch right now to DK and if you do not enable or use any of the DK specific features, you would not even know you were running DK (except for some nice quality of life issues).
+Kalico is a (hard) fork that aims to add features and improvements beyond what is found in mainline Klipper. While this sounds scary, in reality, you can switch right now to Kalico and if you do not enable or use any of the Kalico specific features, you would not even know you were running Kalico (except for some nice quality of life issues).
 
 You can find it [here](https://github.com/KalicoCrew/kalico)
 
@@ -16,15 +16,15 @@ You can find it [here](https://github.com/KalicoCrew/kalico)
 
 So what are some of the things that makes Kalico worth considering?
 
-1. Ever get an ADC out of range and struggle to figure out which thermistor is causing the issue? DK would tell you in plain english, right in the error message, which thermistor is causing your headache!
-2. DK can automatically rotate your klippy log on startup, so you never end up with 257MB logs to then try and share on Discord
+1. Ever get an ADC out of range and struggle to figure out which thermistor is causing the issue? Kalico would tell you in plain english, right in the error message, which thermistor is causing your headache!
+2. Kalico can automatically rotate your klippy log on startup, so you never end up with 257MB logs to then try and share on Discord
 3. MUCH improved sensorless configs, without the need for macros. You can specify both a run_current AND a homing_current and it just works!
 4. gcode shell command is built right in. No more manual installs or using Kiauh to install
-5. Tired of complex macros for dockable probes? DK has you covered with [dockable_probe] support!
+5. Tired of complex macros for dockable probes? Kalico has you covered with [dockable_probe] support!
 6. PID tuning got you down? Tired of overshoots? Consider using pid_v or even better, MPC support, for much more stable temperature management of your bed and hotend
 7. Additional features for fans, such as curve vs linear activation, and reverse fans (not that its going backwards, but the lower the temp, the higher the fan RPM)
 8. Cool additions to macros, and hot reloading of macros is being worked on! No more full restarts to test your macros!
-9. Does your probe have high variance on the first probe? DK has you covered, and can drop the first result, leading to lower standard deviation!
+9. Does your probe have high variance on the first probe? Kalico has you covered, and can drop the first result, leading to lower standard deviation!
 10. Do you want to reload your macros you are testing without restarting Klipper? RELOAD_GCODE_MACROS can do that for you
 11. and much more
 
@@ -32,9 +32,9 @@ Read about all the awesome stuff in more detail [here](https://docs.kalico.gg/Da
 
 There is also dedicated Kalico [documentation](https://docs.kalico.gg/) to review for all the cool things mentioned above
 
-## Switching to DK
+## Switching to Kalico
 
-Switching is easy, and there are several ways to accomplish it (some of these steps borrowed from DK GitHub repo)
+Switching is easy, and there are several ways to accomplish it (some of these steps borrowed from Kalico GitHub repo)
 
 ### Method 1
 
@@ -47,7 +47,7 @@ Old school
     mv klipper klipperOLD
    ```
    
-3. Clone DK into the klipper directory
+3. Clone Kalico into the klipper directory
 
    ```
     git clone https://github.com/KalicoCrew/kalico.git ~/klipper
@@ -96,7 +96,7 @@ For example, the MPC stuff is in the `bleeding-edge-v2` branch. In order to swit
 
 Thats it! to switch back to master, simply use `git checkout master` in step 2 above.
 
-So thats it! Using Danger Klipper is not that dangerous at all, but it can make your life easier if you are willing to learn some new stuff.
+So thats it! Using Kalico is not that dangerous at all, but it can make your life easier if you are willing to learn some new stuff.
 
 Enjoy!
 
