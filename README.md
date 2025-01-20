@@ -11,7 +11,7 @@ This is a landing page for my other Voron related stuff
 
 ## How tos:
 
-- Extra extra, read all about it! [Danger Klipper](DangerKlipper.md) FTW
+- Extra extra, read all about it! [Kalico (formerly Danger Klipper)](Kalico.md) FTW
 - Update Klipper on all the things, [automatically](https://github.com/EricZimmerman/VoronTools/blob/main/AutoKlipper.md)!
 - [Printer tuning considerations](PrinterTuning.md)
 - [Upgrade your Pi's operating system](OSUpgrade.md)
