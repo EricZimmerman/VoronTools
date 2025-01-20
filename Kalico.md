@@ -6,11 +6,11 @@ tl;dr; Its not dangerous at all!
 
 # Getting started
 
-First, what exactly IS Danger Klipper (DK from now on). 
+First, what exactly IS Kalico? 
 
-DK is a (hard) fork that aims to add features and improvements beyond what is found in mainline Klipper. While this sounds scary, in reality, you can switch right now to DK and if you do not enable or use any of the DK specific features, you would not even know you were running DK (except for some nice quality of life issues).
+Kalico is a (hard) fork that aims to add features and improvements beyond what is found in mainline Klipper. While this sounds scary, in reality, you can switch right now to DK and if you do not enable or use any of the DK specific features, you would not even know you were running DK (except for some nice quality of life issues).
 
-You can find DK [here](https://github.com/DangerKlippers/danger-klipper)
+You can find it [here](https://github.com/KalicoCrew/kalico)
 
 ## Some awesome features
 
@@ -28,9 +28,9 @@ So what are some of the things that makes DK worth considering?
 10. Do you want to reload your macros you are testing without restarting Klipper? RELOAD_GCODE_MACROS can do that for you
 11. and much more
 
-Read about all the awesome stuff in more detail [here](https://dangerklipper.io/Danger_Features.html)
+Read about all the awesome stuff in more detail [here](https://docs.kalico.gg/Danger_Features.html)
 
-There is also dedicated DK [documentation](https://dangerklipper.io/) to review for all the cool things mentioned above
+There is also dedicated Kalico [documentation](https://docs.kalico.gg/) to review for all the cool things mentioned above
 
 ## Switching to DK
 
@@ -50,7 +50,7 @@ Old school
 3. Clone DK into the klipper directory
 
    ```
-    git clone https://github.com/DangerKlippers/danger-klipper.git ~/klipper
+    git clone https://github.com/KalicoCrew/kalico.git ~/klipper
     sudo systemctl restart klipper
    ```
    
@@ -61,20 +61,24 @@ Old school
 Use kiuah
 
 1. Install kiauh from here
-2. Add DK repository using this command
-   ```
-   echo "DangerKlippers/danger-klipper" >> ~/kiauh/klipper_repos.txt   
-   ```
-3. Run kiauh
+2. From the KIAUH menu select:
+   - [S] Settings
+   - 1) Set custom Klipper repository
+   - 2) Use https://github.com/KalicoCrew/kalico as the new repository URL
+   - 3) Use main or bleeding-edge-v2 as the new branch name
+   - 4) Select 'Y' to apply the changes
+3. Enter 'B' for back twice
+4. 'Q' to quit
+5. Run kiauh
    ```
    ~/kiauh/kiauh.sh
    ```
-4. Choose option 6
-5. Choose option 1, set custom Klipper repository
-6. Choose the number for Danger Klipper
-7. Confirm with 'Y'
-8. Go back to main menu with 'B' until you arrive there
-9. Use option 1 to install klipper
+6. Choose option 6
+7. Choose option 1, set custom Klipper repository
+8. Choose the number for Kalico
+9. Confirm with 'Y'
+10. Go back to main menu with 'B' until you arrive there
+111. Use option 1 to install klipper
 
 This is the method I usually use for a new install.
 
