@@ -14,7 +14,7 @@ You can find it [here](https://github.com/KalicoCrew/kalico)
 
 ## Some awesome features
 
-So what are some of the things that makes DK worth considering?
+So what are some of the things that makes Kalico worth considering?
 
 1. Ever get an ADC out of range and struggle to figure out which thermistor is causing the issue? DK would tell you in plain english, right in the error message, which thermistor is causing your headache!
 2. DK can automatically rotate your klippy log on startup, so you never end up with 257MB logs to then try and share on Discord
