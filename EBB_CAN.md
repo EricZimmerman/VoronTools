@@ -1,6 +1,6 @@
 This is a quick write up on how do deal with BTT parts as it relates to CAN. This in no way is meant to take away from the awesome work that Maz0r did, which is [here](https://github.com/maz0r/klipper_canbus/). This site is mostly legacy now.
 
-For additional hardware, check out [Esoterical's](https://github.com/Esoterical/voron_canbus) site
+For additional hardware, check out [Esoterical's](https://canbus.esoterical.online/) site
 
 Rather, this document covers using the U2C 2.1 and EBB36 to get CAN going for a typical setup.
 
@@ -21,7 +21,7 @@ If you do not have a bench power supply, consider getting one as this can make y
 
 # Pi
 
-Summarized from [here](https://github.com/Esoterical/voron_canbus)
+Summarized from [here](https://canbus.esoterical.online/Getting_Started.html)
 
 1. Use nano to create a new file with the command `sudo nano /etc/network/interfaces.d/can0`
 2. Add the following code
