@@ -84,9 +84,11 @@ This is the method I usually use for a new install.
 
 ## Changing branches
 
-Some features are in beta, such as MPC (as of 2024-06-14), and as such, if you want them, you need to switch to the branch that contains those new features.
+Experimental features are generally not yet available on the main branch of Kalico and should be used at your own caution.
 
-For example, the MPC stuff is in the `bleeding-edge-v2` branch. In order to switch to that branch, do this:
+An overview of these features can be found on Kalico's [documentation](https://docs.kalico.gg/Bleeding_Edge.html) page, configuration references are found [here](https://docs.kalico.gg/Config_Reference_Bleeding_Edge.html).
+
+To try out experimental features, you need to switch to the `bleeding-edge-v2` branch. In order to switch to that branch, do this:
 
 1. SSH into the pi
 2. Change to klipper directory with `cd klipper`
