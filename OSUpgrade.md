@@ -117,6 +117,8 @@ Set things up to back up to GitHub with the URL above. This is great because you
 
 13. Run Kiauh
 
+    NOTE: Ignore the version number, as those change over time. The selections should be the same, or very close, to what is shown in the screenshots.
+
     ```bash
     ~/kiauh/kiauh.sh
     ```
