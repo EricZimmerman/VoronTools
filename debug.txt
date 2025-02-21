@@ -4,6 +4,11 @@
 #Credit to @dormouse for a whole lot, including making the script not look like hot garbage
 #Credit to @esoterical, from whom i stole this
 
+# ideas:
+# https://coderus.openrepos.net/klipper_logs/
+# https://doctor-klipper.clmntw.fr/
+# Klippylizer
+
 # Directories and files
 KATAPULTDIR="$HOME/katapult"
 CANBOOTDIR="$HOME/CanBoot"
