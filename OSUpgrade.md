@@ -9,8 +9,8 @@ Stop dealing with an old version of your OS and upgrade to the latest and greate
 - VERIFY THE BACKUP OF YOUR CONFIGS
 - Turn off printer
 - Pull SD card (if you have another SD card, use that and your working OS will stay as is for now)
-- Use raspberry pi imager and install Bookworm LITE, 64 bit (NOT DESKTOP)
-  - Be sure to configure additional options like wifi info, ENABLE SSH, and set your username and password
+- Use raspberry pi imager and install *Bookworm LITE, 64 bit* (NOT DESKTOP)
+  - Be sure to configure additional options like wifi info, *ENABLE SSH*, and set your username and password
 - Use imager to put the OS on the SD card
 - When it finishes, ssh into the pi
 - Install kiauh via the website
@@ -19,7 +19,7 @@ Stop dealing with an old version of your OS and upgrade to the latest and greate
 - Install moonraker. Use all defaults presented
 - Install mainsail. Use all defaults presented
 - Connect to mainsail via pi ip address
-- Upload printer.cfg
+- Upload `printer.cfg`
 - Reinstall any addons you might have had (led_effects, tmc autotune, etc)
 - If you are using CAN, do the Pi section [here](https://github.com/EricZimmerman/VoronTools/blob/main/EBB_CAN.md#pi)
 - Test
