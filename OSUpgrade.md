@@ -184,7 +184,7 @@ Set things up to back up to GitHub with the URL above. This is great because you
 
 22. Reinstall any other add-ons per their documentation
 
-23. Upload your `printer.cfg` and any other cfg files that you backed up earlier.
+23. Upload your `printer.cfg` and any other cfg files that you backed up earlier. NOTE: Do *NOT* upload `moonraker.cfg`, as whatever is installed by Kiauh is going to be what you want. If you did overwrite it, just reinstall Moonraker via Kiauh. If you have customized `moonraker.cfg` simply reference your version and add/change the primary one to avoid breaking anything.
 
 24. Test
 
