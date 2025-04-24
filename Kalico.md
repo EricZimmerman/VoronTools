@@ -1,8 +1,3 @@
-So you wanna live dangerously eh?
-
-You heard the rumors, you wondered if its really THAT dangerous, well, let's find out!
-
-tl;dr; Its not dangerous at all!
 
 # Getting started
 
@@ -28,7 +23,7 @@ So what are some of the things that makes Kalico worth considering?
 10. Do you want to reload your macros you are testing without restarting Klipper? RELOAD_GCODE_MACROS can do that for you
 11. and much more
 
-Read about all the awesome stuff in more detail [here](https://docs.kalico.gg/Danger_Features.html)
+Read about all the awesome stuff in more detail [here](https://docs.kalico.gg/Kalico_Additions.html)
 
 There is also dedicated Kalico [documentation](https://docs.kalico.gg/) to review for all the cool things mentioned above
 
