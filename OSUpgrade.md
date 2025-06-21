@@ -15,7 +15,7 @@ Stop dealing with an old version of your OS and upgrade to the latest and greate
 - When it finishes, ssh into the pi
 - Install kiauh via the website
 - Start kiauh
-- Install klipper (or kalico, which is my preference). Use all defaults presented
+- Install klipper (or [kalico](https://github.com/KalicoCrew/kalico?tab=readme-ov-file#option-2-using-kiauh), which is my preference). Use all defaults presented
 - Install moonraker. Use all defaults presented
 - Install mainsail. Use all defaults presented
 - Connect to mainsail via pi ip address
