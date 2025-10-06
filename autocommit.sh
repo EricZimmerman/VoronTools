@@ -91,5 +91,11 @@ push_config(){
   git push origin $branch
 }
 
+cleanup_database(){
+  cd $config_folder
+  rm moonraker-sql.db
+}
+
 grab_version
 push_config
+cleanup_database
