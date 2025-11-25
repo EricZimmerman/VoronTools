@@ -1,3 +1,5 @@
+# YOU SHOULD BE USING [CANBUS.ESOTERICAL.ONLINE](https://canbus.esoterical.online/) THESE DAYS. THIS INFORMATION CAN STILL BE USEFUL, BUT VERIFY IT AGAINST ESOTERICAL'S SITE
+
 This is a quick write up on how do deal with BTT parts as it relates to CAN. This in no way is meant to take away from the awesome work that Maz0r did, which is [here](https://github.com/maz0r/klipper_canbus/). This site is mostly legacy now.
 
 For additional hardware, check out [Esoterical's](https://canbus.esoterical.online/) site
