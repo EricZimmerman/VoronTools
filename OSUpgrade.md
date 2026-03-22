@@ -9,7 +9,7 @@ Stop dealing with an old version of your OS and upgrade to the latest and greate
 - VERIFY THE BACKUP OF YOUR CONFIGS
 - Turn off printer
 - Pull SD card (if you have another SD card, use that and your working OS will stay as is for now)
-- Use raspberry pi imager and install *Bookworm LITE, 64 bit* (NOT DESKTOP)
+- Use raspberry pi imager and install *Trixie LITE, 64 bit* (NOT DESKTOP)
   - Be sure to configure additional options like wifi info, *ENABLE SSH*, and set your username and password
 - Use imager to put the OS on the SD card
 - When it finishes, ssh into the pi
@@ -35,7 +35,7 @@ Set things up to back up to GitHub with the URL above. This is great because you
 1. Turn off the printer and remove the SD card from the pi. Place the SD card in a reader and expose it to your computer. I use a PC, so we will be using that.
 2. Once the SD card shows up as storage, ignore any messages about needing to format the drive. Windows wont understand the file system on the pi.
 3. Download, install and start the Raspberry Pi imager.
-4. Pick the options as shown below
+4. Pick the options as shown below, being sure to choose Trixie as the version
 
    Select your pi type, then click `Choose OS`
    
