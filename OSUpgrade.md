@@ -35,7 +35,7 @@ Set things up to back up to GitHub with the URL above. This is great because you
 1. Turn off the printer and remove the SD card from the pi. Place the SD card in a reader and expose it to your computer. I use a PC, so we will be using that.
 2. Once the SD card shows up as storage, ignore any messages about needing to format the drive. Windows wont understand the file system on the pi.
 3. Download, install and start the Raspberry Pi imager.
-4. Pick the options as shown below, being sure to choose Trixie as the version
+4. Pick the options as shown below, *being sure to choose Trixie as the version*
 
    Select your pi type, then click `Choose OS`
    
@@ -45,7 +45,7 @@ Set things up to back up to GitHub with the URL above. This is great because you
    
    ![image](img/os/Imager2.png)
 
-   If on a Pi 4 with at least 4GB of RAM, choose 64-bit, else 32-bit.
+   If on a Pi 4 with at least 4GB of RAM, choose 64-bit, else 32-bit. 
    
    ![image](img/os/Imager4.png)
 
