@@ -37,6 +37,8 @@ Set things up to back up to GitHub with the URL above. This is great because you
 3. Download, install and start the Raspberry Pi imager.
 4. Pick the options as shown below, *being sure to choose Trixie as the version*
 
+   **Note that the interface you see may not exactly match what is shown below. Adjust accordingly as the imager UI changes from time to time.**
+
    Select your pi type, then click `Choose OS`
    
    ![image](img/os/Imager1.png)
