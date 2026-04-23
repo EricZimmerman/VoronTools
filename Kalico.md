@@ -58,22 +58,18 @@ Use kiuah
 1. Install kiauh from here
 2. From the KIAUH menu select:
    - [S] Settings
-   - 1) Set custom Klipper repository
-   - 2) Use https://github.com/KalicoCrew/kalico as the new repository URL
-   - 3) Use main or bleeding-edge-v2 as the new branch name
-   - 4) Select 'Y' to apply the changes
-3. Enter 'B' for back twice
-4. 'Q' to quit
-5. Run kiauh
-   ```
-   ~/kiauh/kiauh.sh
-   ```
-6. Choose option 6
-7. Choose option 1, set custom Klipper repository
-8. Choose the number for Kalico
-9. Confirm with 'Y'
-10. Go back to main menu with 'B' until you arrive there
-111. Use option 1 to install klipper
+      - 1) Press 1 to switch Klipper repository
+      - 2) Press A to add the Kalico repository
+      - 2) Use https://github.com/KalicoCrew/kalico as the new repository URL
+      - 3) Use `main` as the new branch name
+      - 4) Confirm selection by pressing Y
+3. Once back at the main Klipper repository menu, press 1 to change Klipper repository
+4. Choose your newly added Kalico repository from the list
+5. Press B to get back to main menu
+
+6. Use option 1 to install klipper
+
+For more details on setting up the rest of the printer stack (like for a new install, etc.), see [here](https://github.com/EricZimmerman/VoronTools/blob/main/OSUpgrade.md).
 
 This is the method I usually use for a new install.
 
@@ -91,7 +87,7 @@ To try out experimental features, you need to switch to the `bleeding-edge-v2` b
 4. Check for updates with `git pull --rebase`
 5. Restart Klipper
 
-Thats it! to switch back to master, simply use `git checkout master` in step 2 above.
+Thats it! to switch back to master, simply use `git checkout main` in step 2 above.
 
 So thats it! Using Kalico is not that dangerous at all, but it can make your life easier if you are willing to learn some new stuff.
 
